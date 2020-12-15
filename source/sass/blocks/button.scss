@@ -1,0 +1,13 @@
+.button {
+  @include font(14px, 18px);
+  padding: 10px 32px;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "Roboto Condensed", "Arial", "Helvetica", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: $white;
+  border: 1px solid $white;
+  border-radius: 5px;
+  background: none;
+}

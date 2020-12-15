@@ -1,0 +1,15 @@
+.wrapper {
+  max-width: $wrapper;
+  min-width: $desktop;
+  margin: 0 auto;
+
+  @media (max-width: $tablet) {
+    max-width: $tablet;
+    min-width: $mobile;
+  }
+
+  @media (max-width: $mobile) {
+    max-width: $mobile;
+    min-width: $wrapper-min;
+  }
+}
