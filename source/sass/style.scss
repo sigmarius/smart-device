@@ -1,5 +1,5 @@
 @import "../../node_modules/normalize.css/normalize";
-
-h1 {
-  color: blue;
-}
+@import "base/fonts.scss";
+@import "base/global.scss";
+@import "base/visually-hidden.scss";
+@import "base/variables.scss";
