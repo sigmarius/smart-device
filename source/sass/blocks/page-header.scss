@@ -1,9 +1,23 @@
 .page-header {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  z-index: 1;
-  transform: translateX(-50%);
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    min-height: 878px;
+    content: "";
+
+    background-image: url("../img/hero-bg-desktop@1x.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: $hero-bg;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/hero-bg-desktop@2x.png");
+    }
+  }
 }
 
 .page-header__wrapper {

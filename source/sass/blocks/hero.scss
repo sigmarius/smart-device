@@ -1,13 +1,28 @@
 .hero {
-  width: 100%;
+  position: relative;
   min-height: 878px;
+  color: $white;
 
-  background-image: url("../img/hero-bg-desktop@1x.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: $hero-bg;
+  .hero__wrapper {
+    padding-top: 222px;
+  }
 
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/hero-bg-desktop@2x.png");
+  h2 {
+    @include clear-content(23px);
+    @include font(80px, 106px);
+    font-family: "Roboto Condensed", "Arial", "Helvetica", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+  }
+
+  p {
+    @include clear-content(30px);
+    @include font(22px, 34px);
+  }
+
+  img {
+    position: absolute;
+    top: 171px;
+    right: 180px;
   }
 }

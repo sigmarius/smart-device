@@ -50,7 +50,25 @@
 
   <main class="page-content">
     <section class="hero">
-
+      <div class="hero__wrapper wrapper">
+        <h2>Печатные платы</h2>
+        <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
+        <button class="button button--blue" type="button">Получить бесплатную консультацию</button>
+        <picture>
+          <!-- 1x: 294px; 2x: 588px -->
+          <source media="(max-width: 767px)" srcset="img/hero-img-mobile@1x.webp 1x, img/hero-img-mobile@2x.webp 2x" type="image/webp">
+          <!-- 1x: 260px; 2x: 520px -->
+          <source media="(max-width: 1023px)" srcset="img/hero-img-tablet@1x.webp 1x, img/hero-img-tablet@2x.webp 2x" type="image/webp">
+          <!-- 1x: 705px; 2x: 1410px -->
+          <source media="(min-width: 1024px)" srcset="img/hero-img-desktop@1x.webp 1x, img/hero-img-desktop@2x.webp 2x" type="image/webp">
+          <!-- 1x: 294px; 2x: 588px -->
+          <source media="(max-width: 767px)" srcset="img/hero-img-mobile@1x.png 1x, img/hero-img-mobile@2x.png 2x">
+          <!-- 1x: 260px; 2x: 520px -->
+          <source media="(max-width: 1023px)" srcset="img/hero-img-tablet@1x.png 1x, img/hero-img-tablet@2x.png 2x">
+          <!-- 1x: 705px; 2x: 1410px -->
+          <img src="img/hero-img-desktop@1x.png" srcset="img/hero-img-desktop@2x.png 2x" width="705" height="515" alt="Печатные платы от производителя">
+        </picture>
+      </div>
     </section>
   </main>
 
@@ -88,25 +106,29 @@
         </section>
 
         <section class="page-footer__menu">
-          <h3 class="page-footer__title">Разделы сайта</h3>
-          <ul class="page-footer__list">
-            <li><a href="#">О компании</a></li>
-            <li><a href="#">Продукты</a></li>
-            <li><a href="#">Производство печатных плат</a></li>
-            <li><a href="#">Монтаж печатных плат</a></li>
-            <li><a href="#">Комплектующие</a></li>
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Контакты</a></li>
-          </ul>
+          <button class="page-footer__title" type="button">Разделы сайта</button>
+          <div class="page-footer__panel">
+            <ul class="page-footer__list">
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">Продукты</a></li>
+              <li><a href="#">Производство печатных плат</a></li>
+              <li><a href="#">Монтаж печатных плат</a></li>
+              <li><a href="#">Комплектующие</a></li>
+              <li><a href="#">Доставка</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </div>
         </section>
 
         <section class="page-footer__contacts">
-          <h3 class="page-footer__title">Наш офис</h3>
-          <address>г. Мытищи, Олимпийский проспект, д.10
-          </address>
-          <a href="tel:+74955894050">+7 (495) 589-40-50</a>
-          <a href="tel:+79250038767">+7 (925) 003-87-67</a>
-          <a href="tel: +792692608079"> +7 (926) 926-080-79</a>
+          <button class="page-footer__title" type="button">Наш офис</button>
+          <div class="page-footer__panel">
+            <address>г. Мытищи, Олимпийский проспект,&nbsp;д.10
+            </address>
+            <a href="tel:+74955894050">+7 (495) 589-40-50</a>
+            <a href="tel:+79250038767">+7 (925) 003-87-67</a>
+            <a href="tel: +792692608079"> +7 (926) 926-080-79</a>
+          </div>
         </section>
       </div>
 
@@ -114,7 +136,7 @@
         <h3 class="visually-hidden">Копирайт</h3>
         <p class="page-footer__bottom-copyright">
           <span>Все права защищены</span>
-          1999-2018 SD Service Devices
+          1999-2018&nbsp;SD&nbsp;Service&nbsp;Devices
         </p>
         <a href="#">Условия конфиденциальности</a>
         <p>Developed by <a href="#">wow studio</a></p>

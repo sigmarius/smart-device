@@ -10,4 +10,11 @@
   border: 1px solid $white;
   border-radius: 5px;
   background: none;
+
+  &--blue {
+    @include font(16px, 21px);
+    letter-spacing: 0.05em;
+    background: $blue;
+    border: none;
+  }
 }
