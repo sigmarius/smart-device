@@ -11,6 +11,9 @@ html {
 body {
   position: relative;
   margin: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
   font-family: "PT Mono", "Courier New", "Courier", monospace;
   font-style: normal;
   font-weight: 400;

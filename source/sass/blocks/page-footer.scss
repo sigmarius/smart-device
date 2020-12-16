@@ -1,0 +1,185 @@
+.page-footer {
+  position: relative;
+  min-height: 316px;
+  padding-top: 63px;
+
+  a {
+    color: $hero-bg;
+
+    &:hover,
+    &:focus {
+      color: $blue;
+    }
+
+    &:active {
+      color: $blue;
+      opacity: 0.6;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 52px;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: $line-grey;
+    opacity: 20%;
+  }
+}
+
+.page-footer__content {
+  @include font(15px, 25px);
+  display: flex;
+  color: $hero-bg;
+}
+
+.page-footer__links {
+  width: 30%;
+}
+
+.page-footer__logo {
+  margin-bottom: 50px;
+}
+
+.page-footer__social {
+  @include clear-list;
+  display: flex;
+
+  li:not(:last-child) {
+    margin-right: 14px;
+  }
+}
+
+.page-footer__title {
+  @include clear-content(27px);
+  @include font(15px, 16px);
+  color: $text-grey;
+  text-transform: uppercase;
+}
+
+.page-footer__menu {
+  width: 35%;
+  margin-right: auto;
+}
+
+.page-footer__list {
+  @include clear-list;
+  height: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  opacity: 50%;
+}
+
+.page-footer__contacts {
+  width: 24%;
+  padding-left: 5px;
+
+  address {
+    font-style: normal;
+    opacity: 50%;
+  }
+
+  a {
+    display: block;
+    opacity: 50%;
+  }
+}
+
+.page-footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  opacity: 50%;
+
+  p,
+  a {
+    @include clear-content(0);
+    @include font(13px, 24px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  a {
+    width: 33%;
+  }
+}
+
+.page-footer__bottom-copyright {
+  width: 33%;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: $tablet) {
+  .page-footer {
+    min-height: 457px;
+    padding-top: 0;
+
+    &::before {
+      position: absolute;
+      bottom: 69px;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: $line-grey;
+      opacity: 20%;
+    }
+
+    &::after {
+      top: 96px;
+      bottom: auto;
+    }
+  }
+
+  .page-footer__wrapper {
+    padding: 19px 25px 0;
+  }
+
+  .page-footer__content {
+    flex-wrap: wrap;
+    margin-bottom: 58px;
+  }
+
+  .page-footer__links {
+    width: 100%;
+    margin-bottom: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .page-footer__logo {
+    margin-bottom: 0;
+  }
+
+  .page-footer__social {
+    padding-top: 5px;
+
+    li:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+
+  .page-footer__title {
+    margin-bottom: 25px;
+  }
+
+  .page-footer__menu {
+    width: 50%;
+  }
+
+  .page-footer__list {
+    height: 100%;
+  }
+
+  .page-footer__contacts {
+    width: 50%;
+    padding-left: 17px;
+  }
+
+  .page-footer__bottom-copyright {
+    position: absolute;
+    top: 0;
+  }
+}
