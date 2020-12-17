@@ -725,6 +725,9 @@ a {
   background: none;
   border: none; }
 
+.page-footer__accordion {
+  display: none; }
+
 .page-footer__menu {
   width: 35%;
   margin-right: auto; }
@@ -855,7 +858,32 @@ a {
         -ms-flex-direction: column;
             flex-direction: column; }
   .page-footer__title {
+    position: relative;
     margin-bottom: 28px; }
+  .page-footer__accordion {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: none;
+    border: 1px solid red; }
+    .page-footer__accordion::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 16px;
+      height: 16px;
+      content: url("../img/plus.svg"); }
+  .js-active {
+    background-color: red;
+    display: block; }
+  .js-active::after {
+    top: -5px;
+    content: url("../img/minus.svg"); }
+  .js-hide {
+    display: none; }
   .page-footer__menu {
     width: 100%;
     padding-bottom: 30px; }

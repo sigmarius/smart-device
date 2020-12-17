@@ -17,3 +17,25 @@
   changeTextHandler(mobile);
 
 })();
+
+// аккордион на mobile в футере
+(function () {
+  var accordion = document.querySelectorAll('.page-footer__accordion');
+
+  for (var i=0; i < accordion.length; i++) {
+    accordion[i].addEventListener('click', function () {
+      this.classList.toggle('js-active');
+
+      var panel = this.parentNode.nextElementSibling;
+
+      if (panel.classList.contains('js-active')) {
+        panel.classList.remove('js-active');
+        panel.classList.add('js-hide');
+      } else {
+        panel.classList.add('js-active');
+        panel.classList.remove('js-hide');
+      }
+    });
+  }
+
+})();
