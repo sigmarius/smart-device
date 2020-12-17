@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  min-height: 878px;
+  min-height: 793px;
   color: $white;
 
   img {
@@ -23,6 +23,7 @@
     @include clear-content(23px);
     @include font(80px, 106px);
     font-family: "Roboto Condensed", "Arial", "Helvetica", sans-serif;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.07em;
   }
@@ -101,7 +102,7 @@
 
 @media (max-width: $mobile) {
   .hero {
-    min-height: 616px;
+    min-height: 592px;
 
     img {
       top: 37px;

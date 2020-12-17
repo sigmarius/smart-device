@@ -30,3 +30,14 @@
     url("../fonts/roboto-condensed-v19-cyrillic-700.woff2") format("woff2"),
     url("../fonts/roboto-condensed-v19-cyrillic-700.woff") format("woff");
 }
+
+/* roboto-condensed-regular - cyrillic */
+@font-face {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Roboto Condensed"),
+    url("../fonts/roboto-condensed-v19-cyrillic-regular.woff2") format("woff2"),
+    url("../fonts/roboto-condensed-v19-cyrillic-regular.woff") format("woff");
+}
