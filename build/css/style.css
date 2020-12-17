@@ -567,6 +567,10 @@ a {
         margin-left: auto;
         margin-right: auto;
         padding: 16px 30px; } }
+  .button--blue-border {
+    padding: 12px 52px;
+    color: #00b2ff;
+    border-color: #00b2ff; }
 
 .hero {
   position: relative;
@@ -985,7 +989,7 @@ a {
 
 @media (max-width: 1023px) {
   .features__wrapper {
-    padding: 53px 25px 50px; }
+    padding: 53px 25px 20px; }
   .features__item {
     width: 345px;
     min-height: auto;
@@ -1014,3 +1018,67 @@ a {
       padding-bottom: 57px; }
     .features__item--tag h4 {
       margin-bottom: 14px; } }
+
+.about__wrapper {
+  position: relative;
+  margin-bottom: 110px;
+  padding: 21px 84px 0 300px; }
+  .about__wrapper h3 {
+    margin: 0;
+    margin-bottom: 21px;
+    padding: 0;
+    font-size: 36px;
+    line-height: 57px;
+    font-family: "Roboto Condensed", "Arial", "Helvetica", sans-serif;
+    font-weight: 400;
+    color: #666666; }
+  .about__wrapper p {
+    margin: 0;
+    margin-bottom: 22px;
+    padding: 0;
+    font-size: 16px;
+    line-height: 21.5px;
+    color: #666666; }
+    .about__wrapper p:last-of-type {
+      margin-bottom: 40px; }
+  .about__wrapper::before {
+    position: absolute;
+    top: 29px;
+    left: 90px;
+    width: 220px;
+    height: 317px;
+    background-image: url("../img/year-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: ""; }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      .about__wrapper::before {
+        background-image: url("../img/year-desktop@2x.png"); } }
+
+@media (max-width: 1023px) {
+  .about__wrapper {
+    padding: 5px 20px 0 213px; }
+    .about__wrapper h3 {
+      font-size: 32px;
+      line-height: 45px;
+      margin-bottom: 27px; }
+    .about__wrapper p:last-of-type {
+      margin-bottom: 45px; }
+    .about__wrapper span {
+      display: none; }
+    .about__wrapper::before {
+      top: -6px;
+      left: -3px;
+      width: 251px;
+      height: 362px;
+      background-image: url("../img/year-tablet@1x.png");
+      background-repeat: no-repeat; } }
+    @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+      .about__wrapper::before {
+        background-image: url("../img/year-tablet@2x.png"); } }
+
+@media (max-width: 767px) {
+  .about__wrapper {
+    padding: 5px 20px 0 23px; }
+    .about__wrapper::before {
+      content: none; } }

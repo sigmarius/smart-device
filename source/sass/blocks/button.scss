@@ -31,4 +31,10 @@
       padding: 16px 30px;
     }
   }
+
+  &--blue-border {
+    padding: 12px 52px;
+    color: $blue;
+    border-color: $blue;
+  }
 }
