@@ -232,7 +232,7 @@
     width: 20px;
     height: 20px;
     background: none;
-    border: 1px solid red;
+    border: none;
 
     &::after {
       position: absolute;
@@ -244,11 +244,6 @@
     }
   }
 
-  .js-active {
-    background-color: red;
-    display: block;
-  }
-
   .js-active::after {
     top: -5px;
     content: url("../img/minus.svg");
@@ -256,6 +251,10 @@
 
   .js-hide {
     display: none;
+  }
+
+  .js-show {
+    display: block;
   }
 
   .page-footer__menu {

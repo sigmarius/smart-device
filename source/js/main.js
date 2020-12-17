@@ -22,17 +22,18 @@
 (function () {
   var accordion = document.querySelectorAll('.page-footer__accordion');
 
-  for (var i=0; i < accordion.length; i++) {
-    accordion[i].addEventListener('click', function () {
-      this.classList.toggle('js-active');
+  for (var i = 0; i < accordion.length; i++) {
+    accordion[i].addEventListener('click', function (evt) {
+      var button = evt.target;
+      button.classList.toggle('js-active');
 
-      var panel = this.parentNode.nextElementSibling;
+      var panel = button.parentNode.nextElementSibling;
 
-      if (panel.classList.contains('js-active')) {
-        panel.classList.remove('js-active');
+      if (panel.classList.contains('js-show')) {
+        panel.classList.remove('js-show');
         panel.classList.add('js-hide');
       } else {
-        panel.classList.add('js-active');
+        panel.classList.add('js-show');
         panel.classList.remove('js-hide');
       }
     });

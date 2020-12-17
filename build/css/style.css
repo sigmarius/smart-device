@@ -868,7 +868,7 @@ a {
     width: 20px;
     height: 20px;
     background: none;
-    border: 1px solid red; }
+    border: none; }
     .page-footer__accordion::after {
       position: absolute;
       top: 0;
@@ -876,14 +876,13 @@ a {
       width: 16px;
       height: 16px;
       content: url("../img/plus.svg"); }
-  .js-active {
-    background-color: red;
-    display: block; }
   .js-active::after {
     top: -5px;
     content: url("../img/minus.svg"); }
   .js-hide {
     display: none; }
+  .js-show {
+    display: block; }
   .page-footer__menu {
     width: 100%;
     padding-bottom: 30px; }
