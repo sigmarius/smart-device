@@ -13,8 +13,21 @@
 
   &--blue {
     @include font(16px, 21px);
+    margin-left: 92px;
+    padding: 16px 45px;
     letter-spacing: 0.05em;
     background: $blue;
     border: none;
+
+    @media (max-width: $tablet) {
+      margin-left: 51px;
+      padding: 16px 30px;
+    }
+
+    @media (max-width: $mobile) {
+      margin-left: auto;
+      margin-right: auto;
+      padding: 16px 30px;
+    }
   }
 }

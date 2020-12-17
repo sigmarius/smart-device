@@ -3,9 +3,21 @@
   min-height: 878px;
   color: $white;
 
-  .hero__wrapper {
-    padding-top: 222px;
+  img {
+    position: absolute;
+    top: 171px;
+    right: 180px;
+    z-index: -1;
   }
+}
+
+.hero__wrapper {
+  padding: 222px 0 0 0;
+}
+
+.hero__text {
+  position: relative;
+  width: 51%;
 
   h2 {
     @include clear-content(23px);
@@ -16,13 +28,111 @@
   }
 
   p {
-    @include clear-content(30px);
+    @include clear-content(45px);
     @include font(22px, 34px);
+    position: relative;
+    padding-left: 92px;
+
+    &::before {
+      position: absolute;
+      top: 17px;
+      left: 0;
+      width: 66px;
+      height: 2px;
+      background-color: $white;
+      content: "";
+    }
+  }
+}
+
+.hero__anchor {
+  @include font(14px, 16px);
+  position: absolute;
+  bottom: -150px;
+  left: -46px;
+  font-family: "PT Mono", "Courier New", "Courier", monospace;
+  color: $white;
+  background: none;
+  border: none;
+  transform: rotate(-90deg);
+  opacity: 0.5;
+}
+
+@media (max-width: $tablet) {
+  .hero {
+    min-height: 616px;
+
+    img {
+      top: 42px;
+      right: 0;
+      width: 260px;
+      height: 340px;
+    }
   }
 
-  img {
-    position: absolute;
-    top: 171px;
-    right: 180px;
+  .hero__wrapper {
+    padding: 115px 0 0 88px;
+  }
+
+  .hero__text {
+    width: 63%;
+
+    h2 {
+      @include font(60px, 72px);
+      margin-bottom: 26px;
+    }
+
+    p {
+      @include font(18px, 28px);
+      margin-bottom: 57px;
+      padding-left: 50px;
+
+      &::before {
+        top: 19px;
+        width: 36px;
+      }
+    }
+  }
+
+  .hero__anchor {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile) {
+  .hero {
+    min-height: 616px;
+
+    img {
+      top: 37px;
+      left: 54%;
+      right: auto;
+      width: 294px;
+      height: 220px;
+      transform: translateX(-50%);
+    }
+  }
+
+  .hero__wrapper {
+    padding: 230px 15px 0 18px;
+  }
+
+  .hero__text {
+    width: 100%;
+
+    h2 {
+      @include font(40px, 48px);
+    }
+
+    p {
+      @include font(16px, 25px);
+      margin-bottom: 41px;
+
+      &::before {
+        top: 15px;
+        left: 3px;
+        width: 34px;
+      }
+    }
   }
 }

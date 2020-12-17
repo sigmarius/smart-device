@@ -73,6 +73,15 @@
 }
 
 @media (max-width: $tablet) {
+  .page-header::before {
+    min-height: 686px;
+    background-image: url("../img/hero-bg-tablet@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/hero-bg-tablet@2x.png");
+    }
+  }
+
   .page-header__wrapper {
     padding: 19px 0 0 34px;
   }
@@ -112,6 +121,15 @@
 }
 
 @media (max-width: $mobile) {
+  .page-header::before {
+    min-height: 646px;
+    background-image: url("../img/hero-bg-mobile@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/hero-bg-mobile@2x.png");
+    }
+  }
+
   .page-header__wrapper {
     padding: 17px 0 0 17px;
   }
