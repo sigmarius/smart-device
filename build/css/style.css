@@ -1177,6 +1177,13 @@ a {
     font-family: "Roboto Condensed", "Arial", "Helvetica", sans-serif;
     font-weight: 400;
     color: #ffffff; }
+  .catalog__item:hover figcaption, .catalog__item:focus figcaption {
+    color: #00b2ff; }
+  .catalog__item:hover img, .catalog__item:focus img {
+    opacity: 0.5; }
+  .catalog__item:active figcaption {
+    color: #00b2ff;
+    opacity: 0.6; }
   .catalog__item img {
     width: 100%;
     height: auto;

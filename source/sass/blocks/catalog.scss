@@ -64,6 +64,24 @@
     color: $white;
   }
 
+  &:hover,
+  &:focus {
+    figcaption {
+      color: $blue;
+    }
+
+    img {
+      opacity: 0.5;
+    }
+  }
+
+  &:active {
+    figcaption {
+      color: $blue;
+      opacity: 0.6;
+    }
+  }
+
   img {
     width: 100%;
     height: auto;
