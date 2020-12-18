@@ -3,3 +3,17 @@
   flex-shrink: 1;
   flex-basis: 0;
 }
+
+.page-content__about-wrapper {
+  background-image: url("../img/feature-bg-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $white;
+  background-position: 0 -32px;
+}
+
+@media (max-width: $mobile) {
+  .page-content__about-wrapper {
+    background-image: none;
+  }
+}

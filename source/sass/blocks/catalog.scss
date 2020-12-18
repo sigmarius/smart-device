@@ -1,0 +1,139 @@
+.catalog {
+  background-color: $hero-bg;
+}
+
+.catalog__wrapper {
+  padding: 86px 118px 130px;
+
+  h3 {
+    @include clear-content(48px);
+    @include font(36px, 57px);
+    font-family: "Roboto Condensed", "Arial", "Helvetica", sans-serif;
+    font-weight: 400;
+    color: $white;
+  }
+}
+
+.catalog__list {
+  @include clear-list;
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog__item {
+  position: relative;
+  display: block;
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    width: 63px;
+    height: 63px;
+    background-color: $blue;
+    content: "";
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 33px;
+    right: 31px;
+    z-index: 2;
+    width: 4px;
+    height: 8px;
+    content: url("../img/small-arrow-right.svg");
+  }
+
+  figure {
+    @include clear-content(0);
+    position: relative;
+    width: 370px;
+    height: 620px;
+  }
+
+  figcaption {
+    @include font(20px, 30px);
+    position: absolute;
+    top: 52px;
+    left: 45px;
+    z-index: 2;
+    width: 50%;
+    font-family: "Roboto Condensed", "Arial", "Helvetica", sans-serif;
+    font-weight: 400;
+    color: $white;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+@media (max-width: $tablet) {
+  .catalog__wrapper {
+    padding: 50px 25px 31px;
+
+    h3 {
+      @include font(32px, 45px);
+    }
+  }
+
+  .catalog__list {
+    flex-direction: column;
+  }
+
+  .catalog__item {
+    margin-bottom: 47px;
+
+    figure {
+      width: 720px;
+      height: 256px;
+    }
+
+    figcaption {
+      top: 42px;
+      width: 25%;
+    }
+
+    &--accessories {
+      figcaption {
+        top: 50px;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .catalog__wrapper {
+    padding: 50px 15px 34px 15px;
+
+    h3 {
+      @include font(28px, 39px);
+      margin-bottom: 44px;
+      padding-left: 10px;
+    }
+  }
+
+  .catalog__item {
+    margin-bottom: 30px;
+
+    figure {
+      width: 290px;
+      height: 256px;
+    }
+
+    figcaption {
+      top: 20px;
+      left: 35px;
+      width: 52%;
+    }
+
+    &--accessories {
+      figcaption {
+        top: 30px;
+      }
+    }
+  }
+}

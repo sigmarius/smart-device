@@ -16,6 +16,7 @@
   margin-bottom: 30px;
   padding: 40px 44px 40px;
   border: 1px solid $light-line;
+  background-color: $white;
 
   &::before {
     position: absolute;
@@ -70,7 +71,7 @@
   .features__item {
     width: 345px;
     min-height: auto;
-    padding: 24px 23px 20px;
+    padding: 24px 23px 23px;
 
     svg {
       margin-bottom: 0;
@@ -92,7 +93,8 @@
 
 @media (max-width: $mobile) {
   .features__wrapper {
-    padding: 37px 13px 50px;
+    margin-bottom: 34px;
+    padding: 37px 13px 0;
   }
 
   .features__item {
@@ -105,10 +107,23 @@
 
     h4 {
       @include font(20px, 28px);
+      margin-bottom: 10px;
+    }
+
+    &--hired {
+      padding: 24px 13px 28px 28px;
     }
 
     &--detective {
       padding-bottom: 57px;
+
+      svg {
+        margin-bottom: 4px;
+      }
+
+      h4 {
+        margin-bottom: 17px;
+      }
     }
 
     &--tag {

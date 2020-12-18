@@ -1,6 +1,6 @@
 .about__wrapper {
   position: relative;
-  margin-bottom: 110px;
+  margin-bottom: 112px;
   padding: 21px 84px 0 300px;
 
   h3 {
@@ -40,6 +40,7 @@
 
 @media (max-width: $tablet) {
   .about__wrapper {
+    margin-bottom: 83px;
     padding: 5px 20px 0 213px;
 
     h3 {
@@ -47,16 +48,16 @@
       margin-bottom: 27px;
     }
 
+    p {
+      margin-bottom: 27px;
+    }
+
     p:last-of-type {
       margin-bottom: 45px;
     }
 
-    span {
-      display: none;
-    }
-
     &::before {
-      top: -6px;
+      top: 0;
       left: -3px;
       width: 251px;
       height: 362px;
@@ -72,10 +73,24 @@
 
 @media (max-width: $mobile) {
   .about__wrapper {
-    padding: 5px 20px 0 23px;
+    margin-bottom: 66px;
+    padding: 0 14px;
 
     &::before {
       content: none;
+    }
+
+    h3 {
+      @include font(28px, 39px);
+      margin-bottom: 24px;
+    }
+
+    p {
+      margin-bottom: 48px;
+    }
+
+    p:last-of-type {
+      margin-bottom: 35px;
     }
   }
 }

@@ -18,6 +18,25 @@
 
 })();
 
+// меняет текст в span на .. в разделе О компании на планшете и мобильном
+
+(function () {
+  var tablet = window.matchMedia('(max-width: 1023px)');
+  var span = document.querySelector('.about__toggle');
+
+  var changeTextHandler = function (evt) {
+    if (evt.matches) {
+      span.textContent = '..';
+    } else {
+      span.textContent = ' (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.';
+    }
+  };
+
+  tablet.addListener(changeTextHandler);
+  changeTextHandler(tablet);
+
+})();
+
 // аккордион на mobile в футере
 (function () {
   var accordion = document.querySelectorAll('.page-footer__accordion');
