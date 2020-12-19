@@ -40,7 +40,7 @@
 
 @media (max-width: $tablet) {
   .about__wrapper {
-    margin-bottom: 83px;
+    margin-bottom: 76px;
     padding: 5px 20px 0 213px;
 
     h3 {
@@ -73,7 +73,7 @@
 
 @media (max-width: $mobile) {
   .about__wrapper {
-    margin-bottom: 66px;
+    margin-bottom: 64px;
     padding: 0 14px;
 
     &::before {
@@ -86,7 +86,7 @@
     }
 
     p {
-      margin-bottom: 48px;
+      margin-bottom: 45px;
     }
 
     p:last-of-type {

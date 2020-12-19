@@ -107,11 +107,11 @@
 
     h4 {
       @include font(20px, 28px);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     &--hired {
-      padding: 24px 13px 28px 28px;
+      padding: 22px 13px 29px 28px;
     }
 
     &--detective {
@@ -127,6 +127,10 @@
     }
 
     &--tag {
+      svg {
+        margin-bottom: 4px;
+      }
+
       h4 {
         margin-bottom: 14px;
       }

@@ -37,4 +37,15 @@
     color: $blue;
     border-color: $blue;
   }
+
+  &--submit {
+    width: 48%;
+    padding: 13px 32px;
+    letter-spacing: 0.05em;
+
+    @media (max-width: $mobile) {
+      width: 100%;
+      margin: 0 auto 30px;
+    }
+  }
 }

@@ -1,0 +1,236 @@
+.feedback {
+  min-height: 670px;
+
+  background-image: url("../img/form-bg-desktop.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right 36px;
+  background-color: $blue;
+}
+
+.feedback__wrapper {
+  padding: 0 122px 0 95px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feedback__image {
+  position: relative;
+  width: 50%;
+
+  &::before {
+    position: absolute;
+    top: -360px;
+    left: -175px;
+    width: 670px;
+    height: 641px;
+    content: url("../img/triangles.svg");
+  }
+
+  &::after {
+    position: absolute;
+    top: -139px;
+    left: 0;
+    width: 511px;
+    height: 288px;
+    background-image: url("../img/airplane@1x.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: "";
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/airplane@2x.png");
+    }
+  }
+}
+
+.feedback__form {
+  padding: 87px 0 0 0;
+  width: 570px;
+  color: $white;
+
+  h4 {
+    @include clear-content(8px);
+    @include font(36px, 57px);
+    font-family: "Roboto Condensed", "Arial", "Helvetica", sans-serif;
+    font-weight: 400;
+  }
+
+  p {
+    @include clear-content(50px);
+    @include font(16px, 22px);
+  }
+
+  input,
+  textarea {
+    color: $white;
+    background-color: $blue-form;
+    border: none;
+    border-radius: 0;
+    appearance: none;
+
+    &::placeholder {
+      @include font(16px, 22px);
+      color: $white;
+    }
+  }
+
+  textarea {
+    width: 100%;
+    min-height: 154px;
+    margin-bottom: 39px;
+    padding: 13px 18px;
+    color: $white;
+  }
+}
+
+.feedback__form-row {
+  margin-bottom: 41px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  &--data {
+    input {
+      width: 47.5%;
+      padding: 16px;
+    }
+  }
+
+  &--submit {
+    position: relative;
+
+    input[type="checkbox"] {
+      left: 317px;
+      bottom: 27px;
+    }
+
+    input[type="checkbox"] + label {
+      @include font(14px, 16px);
+      position: relative;
+      width: 40%;
+      cursor: pointer;
+      user-select: none;
+
+      &::before {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: 2px;
+        left: -33px;
+        border: 1px solid $white;
+        content: "";
+      }
+    }
+
+    input[type="checkbox"]:checked + label::after {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      top: 1px;
+      left: -29px;
+      content: url("../img/checked.svg");
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .feedback {
+    min-height: 663px;
+    background-image: none;
+  }
+
+  .feedback__wrapper {
+    padding: 0 87px 0 91px;
+  }
+
+  .feedback__image {
+    display: none;
+  }
+
+  .feedback__form {
+    padding: 79px 0 0;
+    width: 100%;
+
+    h4 {
+      @include font(32px, 45px);
+      margin-bottom: 15px;
+    }
+
+    p {
+      margin-bottom: 53px;
+    }
+
+    textarea {
+      min-height: 162px;
+    }
+  }
+
+  .feedback__form-row {
+    &--data {
+      input {
+        padding: 16px 16px 19px;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .feedback {
+    min-height: 640px;
+  }
+
+  .feedback__wrapper {
+    padding: 0 15px;
+  }
+
+  .feedback__form {
+    padding: 29px 0 0;
+
+    h4 {
+      @include font(28px, 39px);
+    }
+
+    p {
+      margin-bottom: 23px;
+    }
+
+    textarea {
+      min-height: 104px;
+      margin-bottom: 26px;
+    }
+  }
+
+  .feedback__form-row {
+    margin-bottom: 3px;
+
+    &--data {
+      input {
+        margin-bottom: 28px;
+        width: 100%;
+      }
+    }
+
+    &--submit {
+      input[type="checkbox"] {
+        left: 5px;
+        bottom: 18px;
+      }
+
+      input[type="checkbox"] + label {
+        padding-left: 33px;
+        width: 100%;
+
+        &::before {
+          left: 1px;
+        }
+      }
+
+      input[type="checkbox"]:checked + label::after {
+        left: 5px;
+      }
+    }
+  }
+}
