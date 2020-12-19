@@ -59,3 +59,56 @@
   }
 
 })();
+
+// модальное окно Заказать звонок
+(function () {
+  var modalOpen = document.querySelector('.modal-open');
+  var modalClose = document.querySelector('.modal__close');
+  var modal = document.querySelector('.modal');
+
+  var name = document.querySelector('[name=call-name]');
+  var phone = document.querySelector('[name=call-phone]');
+  var comment = document.querySelector('[name=comment]');
+  var form = document.querySelector('.form');
+
+  var isStorage = true;
+  var nameStorage = '';
+  var phoneStorage = '';
+
+  try {
+    nameStorage = localStorage.getItem('name');
+    phoneStorage = localStorage.getItem('phone');
+  } catch (err) {
+    isStorage = false;
+  }
+
+  modalOpen.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    modal.classList.add('modal-show');
+
+    if (nameStorage && phoneStorage) {
+      name.value = nameStorage;
+      phone.value = phoneStorage;
+      comment.focus();
+    }
+
+    name.focus();
+  });
+
+  modalClose.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    modal.classList.remove('modal-show');
+  });
+
+  form.addEventListener('submit', function (evt) {
+    if (name.value || phone.value) {
+      if (isStorage) {
+        localStorage.setItem('nameStorage', name.value);
+        localStorage.setItem('phoneStorage', phone.value);
+      }
+    } else {
+      evt.preventDefault();
+    }
+  });
+
+})();

@@ -1,0 +1,239 @@
+.form {
+  color: $white;
+
+  &--feedback {
+    padding: 87px 0 0 0;
+    width: 570px;
+  }
+
+  h4 {
+    @include clear-content(8px);
+    @include font(36px, 57px);
+    font-family: "Roboto Condensed", "Arial", "Helvetica", sans-serif;
+    font-weight: 400;
+  }
+
+  p {
+    @include clear-content(50px);
+    @include font(16px, 22px);
+  }
+
+  input,
+  textarea {
+    color: $white;
+    background-color: $blue-form;
+    border: none;
+    border-radius: 0;
+    appearance: none;
+
+    &::placeholder {
+      @include font(16px, 22px);
+      color: $white;
+    }
+
+    &:focus {
+      outline-color: $light-line;
+    }
+  }
+
+  input {
+    padding: 16px;
+  }
+
+  textarea {
+    width: 100%;
+    min-height: 154px;
+    margin-bottom: 39px;
+    padding: 13px 18px;
+    color: $white;
+  }
+
+  input[type="checkbox"] {
+    left: 317px;
+    bottom: 27px;
+  }
+
+  input[type="checkbox"] + label {
+    @include font(14px, 16px);
+    position: relative;
+    width: 40%;
+    cursor: pointer;
+    user-select: none;
+
+    &::before {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 2px;
+      left: -33px;
+      border: 1px solid $white;
+      content: "";
+    }
+  }
+
+  input[type="checkbox"]:checked + label::after {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 1px;
+    left: -29px;
+    content: url("../img/checked.svg");
+  }
+}
+
+.form__row {
+  position: relative;
+  margin-bottom: 41px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  &--half {
+    input {
+      width: 47.5%;
+    }
+  }
+
+  &--full {
+    input {
+      width: 100%;
+    }
+  }
+}
+
+.form--modal {
+  max-width: 490px;
+  width: 100%;
+  min-height: 605px;
+  padding: 31px 38px 0;
+  background-color: $blue;
+
+  h4 {
+    @include font(28px, 39px);
+    margin-bottom: 11px;
+  }
+
+  p {
+    margin-bottom: 33px;
+  }
+
+  .form__row {
+    margin-bottom: 32px;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+
+  input {
+    padding: 15px 20px 17px 24px;
+  }
+
+  textarea {
+    min-height: 103px;
+    margin-bottom: 25px;
+    padding: 13px 26px;
+  }
+
+  input[type="checkbox"] + label {
+    width: 100%;
+    padding: 0 47px 0 50px;
+
+    &::before {
+      left: 0;
+    }
+  }
+
+  input[type="checkbox"]:checked + label::after {
+    left: 5px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .form {
+    &--feedback {
+      padding: 79px 0 0;
+    }
+
+    width: 100%;
+
+    h4 {
+      @include font(32px, 45px);
+      margin-bottom: 15px;
+    }
+
+    p {
+      margin-bottom: 53px;
+    }
+
+    textarea {
+      min-height: 162px;
+    }
+  }
+
+  .form__row {
+    &--half {
+      input {
+        padding: 16px 16px 19px;
+      }
+    }
+  }
+
+  .form--modal {
+    top: 20px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .form {
+    padding: 29px 0 0;
+
+    h4 {
+      @include font(28px, 39px);
+    }
+
+    p {
+      margin-bottom: 23px;
+    }
+
+    textarea {
+      min-height: 104px;
+      margin-bottom: 26px;
+    }
+
+    input[type="checkbox"] {
+      left: 5px;
+      bottom: 18px;
+    }
+
+    input[type="checkbox"] + label {
+      padding-left: 33px;
+      width: 100%;
+
+      &::before {
+        left: 1px;
+      }
+    }
+
+    input[type="checkbox"]:checked + label::after {
+      left: 5px;
+    }
+  }
+
+  .form__row {
+    margin-bottom: 3px;
+
+    &--half {
+      input {
+        margin-bottom: 28px;
+        width: 100%;
+      }
+    }
+  }
+
+  .form--modal {
+    padding: 31px 38px 0;
+  }
+}

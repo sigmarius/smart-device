@@ -11,6 +11,7 @@
   border: 1px solid $white;
   border-radius: 5px;
   background: none;
+  cursor: pointer;
 
   &--blue {
     @include font(16px, 21px);

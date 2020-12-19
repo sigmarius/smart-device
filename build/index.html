@@ -102,7 +102,7 @@
           </a>
         </li>
         <li class="page-header__item">
-          <button class="button" type="button">Заказать звонок</button>
+          <button class="button modal-open" type="button">Заказать звонок</button>
         </li>
       </ul>
     </div>
@@ -257,17 +257,17 @@
       <h3 class="visually-hidden">Форма обратной связи</h3>
       <div class="feedback__wrapper wrapper">
         <div class="feedback__image"></div>
-        <form class="feedback__form" action="https://echo.htmlacademy.ru" method="POST">
+        <form class="form form--feedback" action="https://echo.htmlacademy.ru" method="POST">
           <h4>Остались вопросы? Задайте их нам!</h4>
           <p>Мы проконсультируем Вас бесплатно</p>
-          <div class="feedback__form-row feedback__form-row--data">
+          <div class="form__row form__row--half">
             <label class="visually-hidden" for="name">Имя</label>
             <input type="text" id="name" name="name" placeholder="Имя" required="">
             <label class="visually-hidden" for="phone">Номер телефона</label>
             <input type="tel" id="phone" name="phone" placeholder="Телефон" pattern="^((+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" maxlength="12" title="+7, не менее 7 и не более 10 цифр" required="">
           </div>
           <textarea name="comment" rows="4" cols="35">Ваш вопрос</textarea>
-          <div class="feedback__form-row feedback__form-row--submit">
+          <div class="form__row form__row--submit">
             <button class="button button--submit" type="submit">Задать вопрос</button>
             <input class="visually-hidden" type="checkbox" id="agreement" name="agreement" checked="" required="">
             <label for="agreement">Я согласен на обработку  персональных данных</label>
@@ -352,6 +352,32 @@
       </section>
     </div>
   </footer>
+
+  <section class="modal">
+    <h3 class="visually-hidden">Форма заказа обратного звонка</h3>
+    <div class="modal__button">
+      <button class="modal__close" type="button" aria-label="Закрыть окно"></button>
+    </div>
+    <form class="form form--modal" action="https://echo.htmlacademy.ru" method="POST">
+      <h4>Закажите звонок</h4>
+      <p>Оставьте контакты, мы проконсультируем вас&nbsp;бесплатно в удобное время</p>
+      <div class="form__row form__row--full">
+        <label class="visually-hidden" for="call-name">Имя</label>
+        <input type="text" id="call-name" name="call-name" placeholder="Имя" required="">
+      </div>
+      <div class="form__row form__row--full">
+        <label class="visually-hidden" for="call-phone">Номер телефона</label>
+        <input type="tel" id="call-phone" name="call-phone" placeholder="Телефон" maxlength="12" title="+7, не менее 7 и не более 10 цифр" required="">
+      </div>
+      <textarea name="comment" rows="4" cols="35">Ваш вопрос</textarea>
+      <div class="form__row form__row--submit">
+        <button class="button button--submit" type="submit">Отправить</button>
+        <input class="visually-hidden" type="checkbox" id="call-agreement" name="agreement" checked="" required="">
+        <label for="call-agreement">Я согласен на обработку  персональных данных</label>
+      </div>
+    </form>
+  </section>
+
   <script src="js/main.js"></script>
   <script src="js/vendor.js"></script>
 </body>
