@@ -293,12 +293,12 @@
     </div>
   </footer>
 
-  <section class="modal">
+  <section class="modal modal-overlay">
     <h3 class="visually-hidden">Форма заказа обратного звонка</h3>
-    <div class="modal__button">
-      <button class="modal__close" type="button" aria-label="Закрыть окно"></button>
-    </div>
     <form class="form form--modal" action="https://echo.htmlacademy.ru" method="POST">
+      <div class="modal__button">
+        <button class="modal__close" type="button" aria-label="Закрыть окно"></button>
+      </div>
       <h4>Закажите звонок</h4>
       <p>Оставьте контакты, мы проконсультируем вас&nbsp;бесплатно в удобное время</p>
       <div class="form__row form__row--full">
@@ -309,7 +309,7 @@
         <label class="visually-hidden" for="call-phone">Номер телефона</label>
         <input type="tel" id="call-phone" name="call-phone" placeholder="Телефон" maxlength="12" title="+7, не менее 7 и не более 10 цифр" required>
       </div>
-      <textarea name="comment" rows="4" cols="35">Ваш вопрос</textarea>
+      <textarea name="call-comment" rows="4" cols="35">Ваш вопрос</textarea>
       <div class="form__row form__row--submit">
         <button class="button button--submit" type="submit">Отправить</button>
         <input class="visually-hidden" type="checkbox" id="call-agreement" name="agreement" checked="" required>

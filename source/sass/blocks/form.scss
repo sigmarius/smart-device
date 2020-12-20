@@ -103,6 +103,10 @@
 }
 
 .form--modal {
+  position: absolute;
+  top: 136px;
+  left: 50%;
+  transform: translateX(-50%);
   max-width: 490px;
   width: 100%;
   min-height: 605px;

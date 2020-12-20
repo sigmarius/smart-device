@@ -13,6 +13,15 @@
   background: none;
   cursor: pointer;
 
+  &:hover,
+  &:focus {
+    outline: 1px auto $light-line;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
   &--blue {
     @include font(16px, 21px);
     margin-left: 92px;
