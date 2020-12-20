@@ -2,17 +2,36 @@
   position: relative;
   min-height: 793px;
   color: $white;
-
-  img {
-    position: absolute;
-    top: 171px;
-    right: 180px;
-    z-index: -1;
-  }
 }
 
 .hero__wrapper {
   padding: 222px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero__image {
+  position: relative;
+  width: 49%;
+
+  img {
+    position: absolute;
+    top: -51px;
+    right: -69px;
+    width: 705px;
+    height: 515px;
+  }
+
+  &::before {
+    position: absolute;
+    top: -190px;
+    left: 56px;
+    width: 670px;
+    height: 641px;
+    background-image: url("../img/triangles.svg");
+    background-repeat: no-repeat;
+    content: "";
+  }
 }
 
 .hero__text {
@@ -62,12 +81,26 @@
 @media (max-width: $tablet) {
   .hero {
     min-height: 616px;
+  }
+
+  .hero__image {
+    width: 36%;
 
     img {
       top: 42px;
       right: 0;
       width: 260px;
       height: 340px;
+    }
+
+    &::before {
+      top: -188px;
+      left: auto;
+      right: 0;
+      width: 530px;
+      height: 505px;
+      background-size: contain;
+      background-position: 201px -37px;
     }
   }
 
