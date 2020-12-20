@@ -617,20 +617,25 @@ a {
     position: absolute;
     top: -51px;
     right: -69px;
+    z-index: 0;
     width: 705px;
     height: 515px; }
   .hero__image::before {
     position: absolute;
     top: -190px;
-    left: 56px;
+    right: 0;
+    z-index: -1;
     width: 670px;
     height: 641px;
     background-image: url("../img/triangles.svg");
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: 35px 0;
     content: ""; }
 
 .hero__text {
   position: relative;
+  z-index: 2;
   width: 51%; }
   .hero__text h2 {
     margin: 0;
@@ -685,11 +690,9 @@ a {
       height: 340px; }
     .hero__image::before {
       top: -188px;
-      left: auto;
       right: 0;
       width: 530px;
       height: 505px;
-      background-size: contain;
       background-position: 201px -37px; }
   .hero__wrapper {
     padding: 115px 0 0 88px; }
@@ -713,18 +716,34 @@ a {
 @media (max-width: 767px) {
   .hero {
     min-height: 592px; }
-    .hero img {
-      top: 37px;
+  .hero__image {
+    width: 100%;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0; }
+    .hero__image img {
+      top: -193px;
       left: 54%;
       right: auto;
       width: 294px;
       height: 220px;
       -webkit-transform: translateX(-50%);
               transform: translateX(-50%); }
+    .hero__image::before {
+      top: -284px;
+      width: 320px;
+      height: 485px;
+      background-position: 152px -48px;
+      background-size: cover; }
   .hero__wrapper {
-    padding: 230px 15px 0 18px; }
+    padding: 230px 0 0 18px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
   .hero__text {
-    width: 100%; }
+    width: 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1; }
     .hero__text h2 {
       font-size: 40px;
       line-height: 48px; }
