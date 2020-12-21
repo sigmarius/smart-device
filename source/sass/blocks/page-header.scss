@@ -13,6 +13,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-color: $hero-bg;
+    object-fit: cover;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/hero-bg-desktop@2x.png");

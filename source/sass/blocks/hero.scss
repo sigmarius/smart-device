@@ -81,6 +81,15 @@
   border: none;
   transform: rotate(-90deg);
   opacity: 0.5;
+
+  &:hover,
+  &:focus {
+    outline: 1px auto $light-line;
+  }
+
+  &:active {
+    opacity: 1;
+  }
 }
 
 @media (max-width: $tablet) {

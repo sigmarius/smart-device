@@ -410,7 +410,9 @@ a {
     background-image: url("../img/hero-bg-desktop@1x.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: #1b2d37; }
+    background-color: #1b2d37;
+    -o-object-fit: cover;
+       object-fit: cover; }
     @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       .page-header::before {
         background-image: url("../img/hero-bg-desktop@2x.png"); } }
@@ -677,6 +679,10 @@ a {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   opacity: 0.5; }
+  .hero__anchor:hover, .hero__anchor:focus {
+    outline: 1px auto #ebebeb; }
+  .hero__anchor:active {
+    opacity: 1; }
 
 @media (max-width: 1023px) {
   .hero {

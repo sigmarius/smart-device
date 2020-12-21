@@ -54,8 +54,8 @@
         <div class="hero__text">
           <h2>Печатные платы</h2>
           <p>производство и монтаж, поставка комплектующих, блоков&nbsp;и&nbsp;модулей</p>
-          <button class="button button--blue js-consultation" type="button">Получить бесплатную консультацию</button>
-          <button class="hero__anchor" type="button">Скролл вниз</button>
+          <button class="button button--blue js-consultation" type="button" data-link="consultation">Получить бесплатную консультацию</button>
+          <button class="hero__anchor js-anchor" type="button" data-link="features">Скролл вниз</button>
         </div>
         <div class="hero__image">
           <picture>
@@ -77,7 +77,7 @@
     </section>
 
     <div class="page-content__about-wrapper">
-      <section class="features">
+      <section class="features" id="features">
         <div class="features__wrapper wrapper">
           <h3 class="visually-hidden">Наши преимущества</h3>
           <ul class="features__list">
@@ -195,7 +195,7 @@
       </div>
     </section>
 
-    <section class="feedback">
+    <section class="feedback" id="consultation">
       <h3 class="visually-hidden">Форма обратной связи</h3>
       <div class="feedback__wrapper wrapper">
         <div class="feedback__image"></div>
@@ -206,9 +206,9 @@
             <label class="visually-hidden" for="name">Имя</label>
             <input type="text" id="name" name="name" placeholder="Имя" required>
             <label class="visually-hidden" for="phone">Номер телефона</label>
-            <input type="tel" id="phone" name="phone" placeholder="Телефон" pattern="^((+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" maxlength="12" title="+7, не менее 7 и не более 10 цифр" required>
+            <input type="tel" id="phone" name="phone" placeholder="Телефон" pattern="[0-9]{14}" maxlength="14" title="+7, не менее 7 и не более 10 цифр" required>
           </div>
-          <textarea name="comment" rows="4" cols="35">Ваш вопрос</textarea>
+          <textarea name="comment" rows="4" cols="35" placeholder="Ваш вопрос"></textarea>
           <div class="form__row form__row--submit">
             <button class="button button--submit" type="submit">Задать вопрос</button>
             <input class="visually-hidden" type="checkbox" id="agreement" name="agreement" checked="" required>
@@ -309,9 +309,9 @@
       </div>
       <div class="form__row form__row--full">
         <label class="visually-hidden" for="call-phone">Номер телефона</label>
-        <input type="tel" id="call-phone" name="call-phone" placeholder="Телефон" maxlength="12" title="+7, не менее 7 и не более 10 цифр" required>
+        <input type="tel" id="call-phone" name="call-phone" placeholder="Телефон" pattern="[0-9]{14}" maxlength="14" title="+7, не менее 7 и не более 10 цифр" required>
       </div>
-      <textarea name="call-comment" rows="4" cols="35">Ваш вопрос</textarea>
+      <textarea name="call-comment" rows="4" cols="35" placeholder="Ваш вопрос"></textarea>
       <div class="form__row form__row--submit">
         <button class="button button--submit" type="submit">Отправить</button>
         <input class="visually-hidden" type="checkbox" id="call-agreement" name="agreement" checked="" required>
