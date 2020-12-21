@@ -5,7 +5,7 @@
 }
 
 .hero__wrapper {
-  padding: 222px 0 0 0;
+  padding-top: 222px;
   display: flex;
   justify-content: space-between;
 }
@@ -78,7 +78,7 @@
 .hero__anchor {
   @include font(14px, 16px);
   position: absolute;
-  bottom: -150px;
+  top: 427px;
   left: -46px;
   font-family: "PT Mono", "Courier New", "Courier", monospace;
   color: $white;

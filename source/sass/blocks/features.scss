@@ -11,12 +11,17 @@
 
 .features__item {
   position: relative;
-  width: 570px;
+  max-width: 570px;
+  width: 48%;
   min-height: 299px;
   margin-bottom: 30px;
   padding: 40px 44px 40px;
   border: 1px solid $light-line;
   background-color: $white;
+
+  &:nth-child(odd) {
+    margin-right: 20px;
+  }
 
   &::before {
     position: absolute;
@@ -68,8 +73,12 @@
     padding: 53px 25px 20px;
   }
 
+  .features__list {
+    justify-content: center;
+  }
+
   .features__item {
-    width: 345px;
+    max-width: 345px;
     min-height: auto;
     padding: 24px 23px 23px;
 
@@ -98,8 +107,13 @@
   }
 
   .features__item {
+    width: 100%;
     margin-bottom: 20px;
     padding: 24px 15px 24px 28px;
+
+    &:nth-child(odd) {
+      margin-right: 0;
+    }
 
     svg {
       margin-bottom: 8px;

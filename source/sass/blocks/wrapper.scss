@@ -3,6 +3,10 @@
   min-width: $desktop;
   margin: 0 auto;
 
+  @media (min-width: $desktop) and (max-width: $wrapper-max) {
+    padding: 0 20px;
+  }
+
   @media (max-width: $tablet) {
     max-width: $tablet;
     min-width: $mobile;

@@ -74,6 +74,18 @@
   }
 }
 
+@media (min-width: $tablet) and (max-width: $wrapper) {
+  .page-header__links {
+    width: 60%;
+  }
+
+  .page-header__item {
+    &--email {
+      margin-right: 0;
+    }
+  }
+}
+
 @media (max-width: $tablet) {
   .page-header::before {
     min-height: 686px;

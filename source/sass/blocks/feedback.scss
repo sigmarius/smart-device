@@ -23,7 +23,8 @@
     position: absolute;
     top: -360px;
     left: -175px;
-    width: 670px;
+    max-width: 670px;
+    width: 100%;
     height: 641px;
     content: url("../img/triangles.svg");
   }
@@ -32,7 +33,8 @@
     position: absolute;
     top: -139px;
     left: 0;
-    width: 511px;
+    max-width: 511px;
+    width: 100%;
     height: 288px;
     background-image: url("../img/airplane@1x.png");
     background-size: contain;
@@ -41,6 +43,14 @@
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/airplane@2x.png");
+    }
+  }
+}
+
+@media (min-width: $tablet) and (max-width: $wrapper) {
+  .feedback__image {
+    &::after {
+      left: -75px;
     }
   }
 }
