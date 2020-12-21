@@ -620,8 +620,12 @@ a {
     top: -51px;
     right: -69px;
     z-index: 0;
-    width: 705px;
+    max-width: 705px;
+    width: 100%;
     height: 515px; }
+    @media (max-width: 1600px) {
+      .hero__image img {
+        right: 0; } }
   .hero__image::before {
     position: absolute;
     top: -190px;
@@ -1212,30 +1216,32 @@ a {
 .catalog__item {
   position: relative;
   display: block; }
-  .catalog__item::before {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
-    width: 63px;
-    height: 63px;
-    background-color: #00b2ff;
-    content: ""; }
-  .catalog__item::after {
-    position: absolute;
-    bottom: 33px;
-    right: 31px;
-    z-index: 2;
-    width: 4px;
-    height: 8px;
-    content: url("../img/small-arrow-right.svg"); }
   .catalog__item figure {
     margin: 0;
     margin-bottom: 0;
     padding: 0;
     position: relative;
-    width: 370px;
-    height: 620px; }
+    max-width: 370px;
+    width: 100%;
+    min-height: 620px;
+    height: 100%; }
+    .catalog__item figure::before {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      width: 63px;
+      height: 63px;
+      background-color: #00b2ff;
+      content: ""; }
+    .catalog__item figure::after {
+      position: absolute;
+      bottom: 33px;
+      right: 31px;
+      z-index: 2;
+      width: 4px;
+      height: 8px;
+      content: url("../img/small-arrow-right.svg"); }
   .catalog__item figcaption {
     font-size: 20px;
     line-height: 30px;
@@ -1256,8 +1262,12 @@ a {
     opacity: 0.6; }
   .catalog__item img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block; }
+
+@media (min-width: 1023px) and (max-width: 1400px) {
+  .catalog__item:not(:last-child) {
+    margin-right: 20px; } }
 
 @media (max-width: 1023px) {
   .catalog__wrapper {
@@ -1273,8 +1283,10 @@ a {
   .catalog__item {
     margin-bottom: 47px; }
     .catalog__item figure {
-      width: 720px;
-      height: 256px; }
+      max-width: 720px;
+      width: 100%;
+      min-height: 256px;
+      margin: 0 auto; }
     .catalog__item figcaption {
       top: 42px;
       width: 25%; }
@@ -1292,8 +1304,9 @@ a {
   .catalog__item {
     margin-bottom: 30px; }
     .catalog__item figure {
-      width: 290px;
-      height: 256px; }
+      max-width: 290px;
+      width: 100%;
+      min-height: 256px; }
     .catalog__item figcaption {
       top: 20px;
       left: 35px;

@@ -24,32 +24,34 @@
   position: relative;
   display: block;
 
-  &::before {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
-    width: 63px;
-    height: 63px;
-    background-color: $blue;
-    content: "";
-  }
-
-  &::after {
-    position: absolute;
-    bottom: 33px;
-    right: 31px;
-    z-index: 2;
-    width: 4px;
-    height: 8px;
-    content: url("../img/small-arrow-right.svg");
-  }
-
   figure {
     @include clear-content(0);
     position: relative;
-    width: 370px;
-    height: 620px;
+    max-width: 370px;
+    width: 100%;
+    min-height: 620px;
+    height: 100%;
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      width: 63px;
+      height: 63px;
+      background-color: $blue;
+      content: "";
+    }
+  
+    &::after {
+      position: absolute;
+      bottom: 33px;
+      right: 31px;
+      z-index: 2;
+      width: 4px;
+      height: 8px;
+      content: url("../img/small-arrow-right.svg");
+    }
   }
 
   figcaption {
@@ -84,8 +86,14 @@
 
   img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
+  }
+}
+
+@media (min-width: $tablet) and (max-width: 1400px) {
+  .catalog__item:not(:last-child) {
+    margin-right: 20px;
   }
 }
 
@@ -106,8 +114,10 @@
     margin-bottom: 47px;
 
     figure {
-      width: 720px;
-      height: 256px;
+      max-width: 720px;
+      width: 100%;
+      min-height: 256px;
+      margin: 0 auto;
     }
 
     figcaption {
@@ -138,8 +148,9 @@
     margin-bottom: 30px;
 
     figure {
-      width: 290px;
-      height: 256px;
+      max-width: 290px;
+      width: 100%;
+      min-height: 256px;
     }
 
     figcaption {
