@@ -795,6 +795,16 @@ a {
     background-color: #626962;
     opacity: 20%; }
 
+.page-footer__link svg {
+  fill: #cdcdcd; }
+
+.page-footer__link:hover svg, .page-footer__link:focus svg {
+  fill: #00b2ff; }
+
+.page-footer__link:active svg {
+  fill: #00b2ff;
+  opacity: 0.6; }
+
 .page-footer__content {
   font-size: 15px;
   line-height: 25px;
