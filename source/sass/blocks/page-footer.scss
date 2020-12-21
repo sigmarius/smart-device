@@ -28,6 +28,26 @@
   }
 }
 
+.page-footer__link {
+  svg {
+    fill: $social-grey;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: $blue;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: $blue;
+      opacity: 0.6;
+    }
+  }
+}
+
 .page-footer__content {
   @include font(15px, 25px);
   min-height: 215px;
