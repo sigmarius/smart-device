@@ -21,8 +21,26 @@
 // меняет текст в span на .. в разделе О компании на планшете и мобильном
 
 (function () {
+  var WORDS_COUNT = 45;
+
   var tablet = window.matchMedia('(max-width: 1023px)');
   var span = document.querySelector('.about__toggle');
+
+  // var textContainer = document.querySelector('.about__description').innerText;
+  var textContainer = document.querySelector('.about__description');
+  console.log(textContainer);
+
+  var splitText = textContainer.innerText.split(' ', WORDS_COUNT);
+  console.log(splitText);
+
+  var newText = splitText.join(' ');
+  console.log(newText);
+
+  textContainer.innerText = newText;
+
+  var toggle = document.createElement('span');
+  toggle.innerText = '..';
+
 
   var changeTextHandler = function (evt) {
     if (evt.matches) {
@@ -91,15 +109,15 @@
   var setVisible = function (visible) {
     if (visible) {
       body.classList.add('modal-open');
-      document.addEventListener('keydown', escapeClickGandler);
+      document.addEventListener('keydown', escapeClickHandler);
     } else {
       body.classList.remove('modal-open');
       modal.classList.remove('modal-show');
-      document.removeEventListener('keydown', escapeClickGandler);
+      document.removeEventListener('keydown', escapeClickHandler);
     }
   };
 
-  var escapeClickGandler = function (evt) {
+  var escapeClickHandler = function (evt) {
     if (evt.key === KeyCode.ESCAPE) {
       evt.preventDefault();
       setVisible(false);

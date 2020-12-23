@@ -120,11 +120,13 @@
         <section class="about">
           <div class="about__wrapper wrapper">
             <h3>О компании</h3>
-            <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
-            <p>
-              Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог
-              <span class="about__toggle"> (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span>
-            </p>
+            <div class="about__description">
+              <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
+              <p>
+                Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог
+                <span class="about__toggle"> (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span>
+              </p>
+            </div>
             <a class="button button--blue-border" href="">Подробнее</a>
           </div>
         </section>
@@ -213,7 +215,8 @@
               <label class="visually-hidden" for="phone">Номер телефона</label>
               <input type="tel" id="phone" name="phone" placeholder="Телефон" pattern="[0-9]{14}" maxlength="14" title="+7, не менее 7 и не более 10 цифр" required />
             </div>
-            <textarea name="comment" rows="4" cols="35" placeholder="Ваш вопрос"></textarea>
+            <label class="visually-hidden" for="comment">Поле для ввода сообщения</label>
+            <textarea name="comment" id="comment" rows="4" cols="35" placeholder="Ваш вопрос"></textarea>
             <div class="form__row form__row--submit">
               <button class="button button--submit" type="submit">Задать вопрос</button>
               <input class="visually-hidden" type="checkbox" id="agreement" name="agreement" checked="" required />
@@ -317,7 +320,8 @@
           <label class="visually-hidden" for="call-phone">Номер телефона</label>
           <input type="tel" id="call-phone" name="call-phone" placeholder="Телефон" pattern="[0-9]{14}" maxlength="14" title="+7, не менее 7 и не более 10 цифр" required />
         </div>
-        <textarea name="call-comment" rows="4" cols="35" placeholder="Ваш вопрос"></textarea>
+        <label class="visually-hidden" for="call-comment">Поле для ввода сообщения</label>
+        <textarea id="call-comment" name="call-comment" rows="4" cols="35" placeholder="Ваш вопрос"></textarea>
         <div class="form__row form__row--submit">
           <button class="button button--submit" type="submit">Отправить</button>
           <input class="visually-hidden" type="checkbox" id="call-agreement" name="agreement" checked="" required />
