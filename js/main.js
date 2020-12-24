@@ -21,14 +21,22 @@
 // меняет текст в span на .. в разделе О компании на планшете и мобильном
 
 (function () {
+  var WORDS_COUNT = 45;
+  var DEVIDER = '..';
+
   var tablet = window.matchMedia('(max-width: 1023px)');
-  var span = document.querySelector('.about__toggle');
+
+  var textContainer = document.querySelector('.about__description');
+
+  var originalText = textContainer.innerText;
+
+  var smallText = originalText.split(' ', WORDS_COUNT).join(' ').concat(DEVIDER);
 
   var changeTextHandler = function (evt) {
     if (evt.matches) {
-      span.textContent = '..';
+      textContainer.innerText = smallText;
     } else {
-      span.textContent = ' (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.';
+      textContainer.innerText = originalText;
     }
   };
 
@@ -39,21 +47,21 @@
 
 // аккордион на mobile в футере
 (function () {
-  var accordion = document.querySelectorAll('.page-footer__accordion');
+  var accordion = document.querySelectorAll('.accordion');
 
   for (var i = 0; i < accordion.length; i++) {
     accordion[i].addEventListener('click', function (evt) {
       var button = evt.target;
-      button.classList.toggle('js-active');
+      button.classList.toggle('accordion--active');
 
       var panel = button.parentNode.nextElementSibling;
 
-      if (panel.classList.contains('js-show')) {
-        panel.classList.remove('js-show');
-        panel.classList.add('js-hide');
+      if (panel.classList.contains('accordion__panel--visible')) {
+        panel.classList.remove('accordion__panel--visible');
+        panel.classList.add('accordion__panel--hidden');
       } else {
-        panel.classList.add('js-show');
-        panel.classList.remove('js-hide');
+        panel.classList.add('accordion__panel--visible');
+        panel.classList.remove('accordion__panel--hidden');
       }
     });
   }
@@ -91,15 +99,15 @@
   var setVisible = function (visible) {
     if (visible) {
       body.classList.add('modal-open');
-      document.addEventListener('keydown', escapeClickGandler);
+      document.addEventListener('keydown', escapeClickHandler);
     } else {
       body.classList.remove('modal-open');
       modal.classList.remove('modal-show');
-      document.removeEventListener('keydown', escapeClickGandler);
+      document.removeEventListener('keydown', escapeClickHandler);
     }
   };
 
-  var escapeClickGandler = function (evt) {
+  var escapeClickHandler = function (evt) {
     if (evt.key === KeyCode.ESCAPE) {
       evt.preventDefault();
       setVisible(false);
