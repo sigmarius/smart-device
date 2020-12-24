@@ -1,23 +1,5 @@
 'use strict';
 
-// меняет текст кнопки на mobile на главном экране hero
-(function () {
-  var mobile = window.matchMedia('(max-width: 767px)');
-  var consultationButton = document.querySelector('.js-consultation');
-
-  var changeTextHandler = function (evt) {
-    if (evt.matches) {
-      consultationButton.textContent = 'Бесплатная консультация';
-    } else {
-      consultationButton.textContent = 'Получить бесплатную консультацию';
-    }
-  };
-
-  mobile.addListener(changeTextHandler);
-  changeTextHandler(mobile);
-
-})();
-
 // меняет текст в span на .. в разделе О компании на планшете и мобильном
 
 (function () {
@@ -45,6 +27,8 @@
 
 })();
 
+'use strict';
+
 // аккордион на mobile в футере
 (function () {
   var accordion = document.querySelectorAll('.accordion');
@@ -67,6 +51,49 @@
   }
 
 })();
+
+'use strict';
+
+// Плавная прокрутка до якоря
+(function () {
+  var links = document.querySelectorAll('[data-link]');
+
+  for (var i = 0; i < links.length; i++) {
+
+    links[i].addEventListener('click', function (evt) {
+
+      var target = document.querySelector('[id=' + evt.target.dataset.link + ']');
+
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+  }
+
+})();
+
+'use strict';
+
+// меняет текст кнопки на mobile на главном экране hero
+(function () {
+  var mobile = window.matchMedia('(max-width: 767px)');
+  var consultationButton = document.querySelector('.js-consultation');
+
+  var changeTextHandler = function (evt) {
+    if (evt.matches) {
+      consultationButton.textContent = 'Бесплатная консультация';
+    } else {
+      consultationButton.textContent = 'Получить бесплатную консультацию';
+    }
+  };
+
+  mobile.addListener(changeTextHandler);
+  changeTextHandler(mobile);
+
+})();
+
+'use strict';
 
 // модальное окно Заказать звонок
 (function () {
@@ -153,27 +180,9 @@
 
 })();
 
-// Плавная прокрутка до якоря
-(function () {
-  var links = document.querySelectorAll('[data-link]');
+'use strict';
 
-  for (var i = 0; i < links.length; i++) {
-
-    links[i].addEventListener('click', function (evt) {
-
-      var target = document.querySelector('[id=' + evt.target.dataset.link + ']');
-
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    });
-  }
-
-})();
-
-
-// Валидация номера телефона
+// Валидация номера телефона в модальном окне
 (function () {
   var phoneNumber = document.querySelectorAll('[type=tel]');
 
@@ -198,4 +207,5 @@
   for (var i = 0; i < phoneNumber.length; i++) {
     setMask(phoneNumber[i]);
   }
+
 })();

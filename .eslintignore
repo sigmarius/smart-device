@@ -1,2 +1,2 @@
-source/js/vendor.js
-build/js/vendor.js
+source/js/vendor/
+build/js/
