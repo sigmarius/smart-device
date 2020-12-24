@@ -4,17 +4,21 @@
 (function () {
   var links = document.querySelectorAll('[data-link]');
 
-  for (var i = 0; i < links.length; i++) {
+  if (links) {
+    for (var i = 0; i < links.length; i++) {
 
-    links[i].addEventListener('click', function (evt) {
+      links[i].addEventListener('click', function (evt) {
 
-      var target = document.querySelector('[id=' + evt.target.dataset.link + ']');
+        var target = document.querySelector('[id=' + evt.target.dataset.link + ']');
 
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
       });
-    });
+    }
   }
 
 })();

@@ -14,13 +14,15 @@
 
   var smallText = originalText.split(' ', WORDS_COUNT).join(' ').concat(DEVIDER);
 
-  var changeTextHandler = function (evt) {
-    if (evt.matches) {
-      textContainer.innerText = smallText;
-    } else {
-      textContainer.innerText = originalText;
-    }
-  };
+  if (textContainer) {
+    var changeTextHandler = function (evt) {
+      if (evt.matches) {
+        textContainer.innerText = smallText;
+      } else {
+        textContainer.innerText = originalText;
+      }
+    };
+  }
 
   tablet.addListener(changeTextHandler);
   changeTextHandler(tablet);

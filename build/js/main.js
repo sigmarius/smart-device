@@ -14,13 +14,15 @@
 
   var smallText = originalText.split(' ', WORDS_COUNT).join(' ').concat(DEVIDER);
 
-  var changeTextHandler = function (evt) {
-    if (evt.matches) {
-      textContainer.innerText = smallText;
-    } else {
-      textContainer.innerText = originalText;
-    }
-  };
+  if (textContainer) {
+    var changeTextHandler = function (evt) {
+      if (evt.matches) {
+        textContainer.innerText = smallText;
+      } else {
+        textContainer.innerText = originalText;
+      }
+    };
+  }
 
   tablet.addListener(changeTextHandler);
   changeTextHandler(tablet);
@@ -33,21 +35,23 @@
 (function () {
   var accordion = document.querySelectorAll('.accordion');
 
-  for (var i = 0; i < accordion.length; i++) {
-    accordion[i].addEventListener('click', function (evt) {
-      var button = evt.target;
-      button.classList.toggle('accordion--active');
+  if (accordion) {
+    for (var i = 0; i < accordion.length; i++) {
+      accordion[i].addEventListener('click', function (evt) {
+        var button = evt.target;
+        button.classList.toggle('accordion--active');
 
-      var panel = button.parentNode.nextElementSibling;
+        var panel = button.parentNode.nextElementSibling;
 
-      if (panel.classList.contains('accordion__panel--visible')) {
-        panel.classList.remove('accordion__panel--visible');
-        panel.classList.add('accordion__panel--hidden');
-      } else {
-        panel.classList.add('accordion__panel--visible');
-        panel.classList.remove('accordion__panel--hidden');
-      }
-    });
+        if (panel.classList.contains('accordion__panel--visible')) {
+          panel.classList.remove('accordion__panel--visible');
+          panel.classList.add('accordion__panel--hidden');
+        } else {
+          panel.classList.add('accordion__panel--visible');
+          panel.classList.remove('accordion__panel--hidden');
+        }
+      });
+    }
   }
 
 })();
@@ -58,17 +62,21 @@
 (function () {
   var links = document.querySelectorAll('[data-link]');
 
-  for (var i = 0; i < links.length; i++) {
+  if (links) {
+    for (var i = 0; i < links.length; i++) {
 
-    links[i].addEventListener('click', function (evt) {
+      links[i].addEventListener('click', function (evt) {
 
-      var target = document.querySelector('[id=' + evt.target.dataset.link + ']');
+        var target = document.querySelector('[id=' + evt.target.dataset.link + ']');
 
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
       });
-    });
+    }
   }
 
 })();
@@ -141,42 +149,52 @@
     }
   };
 
-  modal.addEventListener('click', function (evt) {
-    if (evt.target === modal && evt.target !== form) {
-      setVisible(false);
-    }
-  });
-
-  modalOpen.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    modal.classList.add('modal-overlay--show');
-    setVisible(true);
-    name.focus();
-
-    if (nameStorage && phoneStorage) {
-      name.value = nameStorage;
-      phone.value = phoneStorage;
-      comment.value = commentStorage;
-    }
-  });
-
-  modalClose.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    modal.classList.remove('modal-overlay--show');
-    setVisible(false);
-  });
-
-  form.addEventListener('submit', function (evt) {
-    if (!name.value || !phone.value) {
-      evt.preventDefault();
-    } else {
-      if (isStorage) {
-        localStorage.setItem('nameStorage', name.value);
-        localStorage.setItem('phoneStorage', phone.value);
-        localStorage.setItem('commentStorage', comment.value);
+  if (modal) {
+    modal.addEventListener('click', function (evt) {
+      if (evt.target === modal && evt.target !== form) {
+        setVisible(false);
       }
-    }
-  });
+    });
+  }
+
+  if (modalOpen) {
+    modalOpen.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      if (modal) {
+        modal.classList.add('modal-overlay--show');
+        setVisible(true);
+        name.focus();
+      }
+
+      if (nameStorage && phoneStorage) {
+        name.value = nameStorage;
+        phone.value = phoneStorage;
+        comment.value = commentStorage;
+      }
+    });
+  }
+
+  if (modalClose) {
+    modalClose.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      modal.classList.remove('modal-overlay--show');
+      setVisible(false);
+    });
+  }
+
+  if (form) {
+    form.addEventListener('submit', function (evt) {
+      if (!name.value || !phone.value) {
+        evt.preventDefault();
+      } else {
+        if (isStorage) {
+          localStorage.setItem('nameStorage', name.value);
+          localStorage.setItem('phoneStorage', phone.value);
+          localStorage.setItem('commentStorage', comment.value);
+        }
+      }
+    });
+  }
 
 })();
 
@@ -204,8 +222,10 @@
     });
   };
 
-  for (var i = 0; i < phoneNumber.length; i++) {
-    setMask(phoneNumber[i]);
+  if (phoneNumber) {
+    for (var i = 0; i < phoneNumber.length; i++) {
+      setMask(phoneNumber[i]);
+    }
   }
 
 })();

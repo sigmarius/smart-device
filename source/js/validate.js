@@ -22,8 +22,10 @@
     });
   };
 
-  for (var i = 0; i < phoneNumber.length; i++) {
-    setMask(phoneNumber[i]);
+  if (phoneNumber) {
+    for (var i = 0; i < phoneNumber.length; i++) {
+      setMask(phoneNumber[i]);
+    }
   }
 
 })();
