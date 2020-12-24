@@ -42,6 +42,10 @@
     }
   }
 
+  &--blue-small {
+    display: none;
+  }
+
   &--blue-border {
     padding: 12px 52px;
     color: $blue;
@@ -52,10 +56,20 @@
     width: 48%;
     padding: 13px 32px;
     letter-spacing: 0.05em;
+  }
+}
 
-    @media (max-width: $mobile) {
-      width: 100%;
-      margin: 0 auto 30px;
-    }
+@media (max-width: $mobile) {
+  .button--blue-small {
+    display: inline-block;
+  }
+
+  .button--blue-big {
+    display: none;
+  }
+
+  .button--submit {
+    width: 100%;
+    margin: 0 auto 30px;
   }
 }

@@ -594,6 +594,8 @@ a {
         margin-left: auto;
         margin-right: auto;
         padding: 16px 30px; } }
+  .button--blue-small {
+    display: none; }
   .button--blue-border {
     padding: 12px 52px;
     color: #00b2ff;
@@ -602,10 +604,15 @@ a {
     width: 48%;
     padding: 13px 32px;
     letter-spacing: 0.05em; }
-    @media (max-width: 767px) {
-      .button--submit {
-        width: 100%;
-        margin: 0 auto 30px; } }
+
+@media (max-width: 767px) {
+  .button--blue-small {
+    display: inline-block; }
+  .button--blue-big {
+    display: none; }
+  .button--submit {
+    width: 100%;
+    margin: 0 auto 30px; } }
 
 .hero {
   position: relative;
