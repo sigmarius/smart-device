@@ -22,30 +22,36 @@
 
 (function () {
   var WORDS_COUNT = 45;
+  var DEVIDER = '..';
 
   var tablet = window.matchMedia('(max-width: 1023px)');
-  var span = document.querySelector('.about__toggle');
 
   var textContainer = document.querySelector('.about__description');
-  console.log(textContainer);
 
-  var splitText = textContainer.innerText.split(' ', WORDS_COUNT);
-  console.log(splitText);
+  var originalText = textContainer.innerText;
 
-  var newText = splitText.join(' ');
-  console.log(newText);
+  var smallText = originalText.split(' ', WORDS_COUNT).join(' ').concat(DEVIDER);
 
-  textContainer.innerText = newText;
+  console.log(smallText);
+  // var paragraphs = originalText.slice().split('.');
+  // console.log(paragraphs);
 
-  var toggle = document.createElement('span');
-  toggle.innerText = '..';
+  // var addElement = function (elem) {
+  //   var newParagraph = document.createElement('p');
+  //   newParagraph.textContent = paragraphs[elem];
+  //   textContainer.appendChild(newParagraph);
+  // };
 
+  // for (var i = 0; i < paragraphs.length; i++) {
+  //   addElement(paragraphs[i]);    
+  //   console.log(paragraphs[i]);
+  // }
 
   var changeTextHandler = function (evt) {
     if (evt.matches) {
-      span.textContent = '..';
+      textContainer.innerText = smallText;
     } else {
-      span.textContent = ' (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.';
+      textContainer.innerText = originalText;
     }
   };
 

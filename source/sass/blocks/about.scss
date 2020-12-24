@@ -1,7 +1,7 @@
 .about__wrapper {
   position: relative;
   margin-bottom: 112px;
-  padding: 21px 84px 0 300px;
+  padding: 21px 122px 0 300px;
 
   h3 {
     @include clear-content(21px);
@@ -9,16 +9,6 @@
     font-family: "Roboto Condensed", "Arial", "Helvetica", sans-serif;
     font-weight: 400;
     color: $text-darker;
-  }
-
-  p {
-    @include clear-content(22px);
-    @include font(16px, 21.5px);
-    color: $text-darker;
-
-    &:last-of-type {
-      margin-bottom: 40px;
-    }
   }
 
   &::before {
@@ -38,22 +28,24 @@
   }
 }
 
+.about__description {
+  @include clear-content(22px);
+  @include font(16px, 21.5px);
+  color: $text-darker;
+
+  &:last-of-type {
+    margin-bottom: 40px;
+  }
+}
+
 @media (max-width: $tablet) {
   .about__wrapper {
-    margin-bottom: 76px;
-    padding: 5px 20px 0 213px;
+    margin-bottom: 86px;
+    padding: 9px 20px 0 213px;
 
     h3 {
       @include font(32px, 45px);
       margin-bottom: 27px;
-    }
-
-    p {
-      margin-bottom: 27px;
-    }
-
-    p:last-of-type {
-      margin-bottom: 45px;
     }
 
     &::before {
@@ -67,6 +59,14 @@
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/year-tablet@2x.png");
       }
+    }
+  }
+
+  .about__description {
+    margin-bottom: 27px;
+
+    &:last-of-type {
+      margin-bottom: 45px;
     }
   }
 }
@@ -84,12 +84,12 @@
       @include font(28px, 39px);
       margin-bottom: 24px;
     }
+  }
 
-    p {
-      margin-bottom: 45px;
-    }
+  .about__description {
+    margin-bottom: 45px;
 
-    p:last-of-type {
+    &:last-of-type {
       margin-bottom: 35px;
     }
   }
