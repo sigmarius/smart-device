@@ -5,7 +5,7 @@
   var KeyCode = {
     ESCAPE: 'Escape',
   };
-  var modalOpen = document.querySelector('.modal-open');
+  var modalOpen = document.querySelector('.modal-overlay--open');
   var modalClose = document.querySelector('.modal__close');
   var modal = document.querySelector('.modal');
   var body = document.querySelector('body');
@@ -30,11 +30,11 @@
 
   var setVisible = function (visible) {
     if (visible) {
-      body.classList.add('modal-open');
+      body.classList.add('modal-overlay--open');
       document.addEventListener('keydown', escapeClickHandler);
     } else {
-      body.classList.remove('modal-open');
-      modal.classList.remove('modal-show');
+      body.classList.remove('modal-overlay--open');
+      modal.classList.remove('modal-overlay--show');
       document.removeEventListener('keydown', escapeClickHandler);
     }
   };
@@ -54,7 +54,7 @@
 
   modalOpen.addEventListener('click', function (evt) {
     evt.preventDefault();
-    modal.classList.add('modal-show');
+    modal.classList.add('modal-overlay--show');
     setVisible(true);
     name.focus();
 
@@ -67,7 +67,7 @@
 
   modalClose.addEventListener('click', function (evt) {
     evt.preventDefault();
-    modal.classList.remove('modal-show');
+    modal.classList.remove('modal-overlay--show');
     setVisible(false);
   });
 

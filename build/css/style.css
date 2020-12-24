@@ -1639,12 +1639,6 @@ a {
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg); }
 
-.modal-show {
-  display: block; }
-
-.modal-open {
-  overflow: hidden; }
-
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -1654,3 +1648,7 @@ a {
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.8); }
+  .modal-overlay--show {
+    display: block; }
+  .modal-overlay--open {
+    overflow: hidden; }
