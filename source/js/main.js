@@ -26,7 +26,6 @@
   var tablet = window.matchMedia('(max-width: 1023px)');
   var span = document.querySelector('.about__toggle');
 
-  // var textContainer = document.querySelector('.about__description').innerText;
   var textContainer = document.querySelector('.about__description');
   console.log(textContainer);
 
