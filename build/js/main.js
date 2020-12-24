@@ -32,21 +32,6 @@
 
   var smallText = originalText.split(' ', WORDS_COUNT).join(' ').concat(DEVIDER);
 
-  console.log(smallText);
-  // var paragraphs = originalText.slice().split('.');
-  // console.log(paragraphs);
-
-  // var addElement = function (elem) {
-  //   var newParagraph = document.createElement('p');
-  //   newParagraph.textContent = paragraphs[elem];
-  //   textContainer.appendChild(newParagraph);
-  // };
-
-  // for (var i = 0; i < paragraphs.length; i++) {
-  //   addElement(paragraphs[i]);    
-  //   console.log(paragraphs[i]);
-  // }
-
   var changeTextHandler = function (evt) {
     if (evt.matches) {
       textContainer.innerText = smallText;
@@ -62,21 +47,21 @@
 
 // аккордион на mobile в футере
 (function () {
-  var accordion = document.querySelectorAll('.page-footer__accordion');
+  var accordion = document.querySelectorAll('.accordion');
 
   for (var i = 0; i < accordion.length; i++) {
     accordion[i].addEventListener('click', function (evt) {
       var button = evt.target;
-      button.classList.toggle('js-active');
+      button.classList.toggle('accordion--active');
 
       var panel = button.parentNode.nextElementSibling;
 
-      if (panel.classList.contains('js-show')) {
-        panel.classList.remove('js-show');
-        panel.classList.add('js-hide');
+      if (panel.classList.contains('accordion__panel--visible')) {
+        panel.classList.remove('accordion__panel--visible');
+        panel.classList.add('accordion__panel--hidden');
       } else {
-        panel.classList.add('js-show');
-        panel.classList.remove('js-hide');
+        panel.classList.add('accordion__panel--visible');
+        panel.classList.remove('accordion__panel--hidden');
       }
     });
   }

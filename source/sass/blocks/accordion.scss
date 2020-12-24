@@ -1,0 +1,38 @@
+.accordion {
+  display: none;
+}
+
+@media (max-width: $mobile) {
+  .accordion {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: none;
+    border: none;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 16px;
+      height: 16px;
+      content: url("../img/plus.svg");
+    }
+
+    &--active::after {
+      top: -5px;
+      content: url("../img/minus.svg");
+    }
+  }
+
+  .accordion__panel--hidden {
+    display: none;
+  }
+
+  .accordion__panel--visible {
+    display: block;
+  }
+}
