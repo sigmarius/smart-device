@@ -3,7 +3,7 @@
   margin-bottom: 112px;
   padding: 21px 122px 0 300px;
 
-  h3 {
+  h2 {
     @include clear-content(21px);
     @include font(36px, 57px);
     font-family: "Roboto Condensed", "Arial", "Helvetica", sans-serif;
@@ -40,10 +40,10 @@
 
 @media (max-width: $tablet) {
   .about__wrapper {
-    margin-bottom: 86px;
+    margin-bottom: 83px;
     padding: 9px 20px 0 213px;
 
-    h3 {
+    h2 {
       @include font(32px, 45px);
       margin-bottom: 27px;
     }
@@ -80,7 +80,7 @@
       content: none;
     }
 
-    h3 {
+    h2 {
       @include font(28px, 39px);
       margin-bottom: 24px;
     }

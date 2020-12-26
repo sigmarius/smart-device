@@ -3,9 +3,9 @@
 }
 
 .catalog__wrapper {
-  padding: 86px 118px 126px;
+  padding: 86px 118px 106px;
 
-  h3 {
+  h2 {
     @include clear-content(48px);
     @include font(36px, 57px);
     font-family: "Roboto Condensed", "Arial", "Helvetica", sans-serif;
@@ -17,12 +17,18 @@
 .catalog__list {
   @include clear-list;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .catalog__item {
   position: relative;
+  margin-bottom: 20px;
   display: block;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 
   figure {
     @include clear-content(0);
@@ -101,7 +107,7 @@
   .catalog__wrapper {
     padding: 50px 25px 31px;
 
-    h3 {
+    h2 {
       @include font(32px, 45px);
     }
   }
@@ -112,6 +118,10 @@
 
   .catalog__item {
     margin-bottom: 47px;
+
+    &:not(:last-child) {
+      margin-right: 0;
+    }
 
     figure {
       max-width: 720px;
@@ -137,7 +147,7 @@
   .catalog__wrapper {
     padding: 50px 15px 34px 15px;
 
-    h3 {
+    h2 {
       @include font(28px, 39px);
       margin-bottom: 44px;
       padding-left: 10px;
@@ -148,9 +158,10 @@
     margin-bottom: 30px;
 
     figure {
-      max-width: 290px;
+      max-width: 100%;
       width: 100%;
-      min-height: 256px;
+      max-height: 256px;
+      overflow: hidden;
     }
 
     figcaption {

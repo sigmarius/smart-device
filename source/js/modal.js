@@ -2,9 +2,6 @@
 
 // модальное окно Заказать звонок
 (function () {
-  var KeyCode = {
-    ESCAPE: 'Escape',
-  };
   var modalOpen = document.querySelector('.modal-overlay--open');
   var modalClose = document.querySelector('.modal__close');
   var modal = document.querySelector('.modal');
@@ -40,7 +37,7 @@
   };
 
   var escapeClickHandler = function (evt) {
-    if (evt.key === KeyCode.ESCAPE) {
+    if (evt.key === window.utils.KeyCode.ESCAPE) {
       evt.preventDefault();
       setVisible(false);
     }

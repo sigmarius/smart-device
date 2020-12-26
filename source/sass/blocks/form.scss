@@ -6,7 +6,7 @@
     width: 570px;
   }
 
-  h4 {
+  h3 {
     @include clear-content(8px);
     @include font(36px, 57px);
     font-family: "Roboto Condensed", "Arial", "Helvetica", sans-serif;
@@ -46,6 +46,7 @@
     margin-bottom: 39px;
     padding: 13px 18px;
     color: $white;
+    resize: none;
   }
 
   input[type="checkbox"] {
@@ -113,7 +114,7 @@
   padding: 31px 38px 0;
   background-color: $blue;
 
-  h4 {
+  h3 {
     @include font(28px, 39px);
     margin-bottom: 11px;
   }
@@ -163,7 +164,7 @@
 
     width: 100%;
 
-    h4 {
+    h3 {
       @include font(32px, 45px);
       margin-bottom: 15px;
     }
@@ -194,7 +195,7 @@
   .form {
     padding: 29px 0 0;
 
-    h4 {
+    h3 {
       @include font(28px, 39px);
     }
 
