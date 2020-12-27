@@ -172,7 +172,15 @@
     display: none;
   }
 
+  .page-header__links {
+    margin-right: 0;
+  }
+
   .page-header__item {
+    &:not(:last-child) {
+      margin-right: auto;
+    }
+
     &--email {
       margin-right: 8px;
     }

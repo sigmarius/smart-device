@@ -531,6 +531,10 @@ a {
   .page-header__logo-title,
   .page-header__logo-text {
     display: none; }
+  .page-header__links {
+    margin-right: 0; }
+  .page-header__item:not(:last-child) {
+    margin-right: auto; }
   .page-header__item--email {
     margin-right: 8px; } }
 
@@ -782,7 +786,7 @@ a {
 .page-footer {
   position: relative;
   min-height: 316px;
-  padding-top: 61px; }
+  padding-top: 64px; }
   .page-footer a {
     color: #1b2d37; }
     .page-footer a:hover, .page-footer a:focus {
@@ -816,13 +820,13 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   color: #1b2d37; }
 
-.page-footer__links {
-  width: 30%; }
-
 .page-footer__logo {
-  margin-bottom: 50px; }
+  margin-bottom: 47px; }
 
 .page-footer__social {
   padding: 0;
@@ -848,8 +852,10 @@ a {
   border: none; }
 
 .page-footer__menu {
-  width: 35%;
-  margin-right: auto; }
+  padding: 0 155px 0 204px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
 
 .page-footer__list {
   padding: 0;
@@ -866,15 +872,21 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
   opacity: 50%; }
+  .page-footer__list li {
+    margin-right: 20px; }
 
 .page-footer__contacts {
-  width: 24%;
   padding-left: 5px; }
   .page-footer__contacts address {
     font-style: normal;
     opacity: 50%; }
-  .page-footer__contacts a {
-    display: block;
+
+.page-footer__contacts-list {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+  .page-footer__contacts-list a {
+    display: inline-block;
     opacity: 50%; }
 
 .page-footer__bottom {
@@ -905,6 +917,10 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+
+@media (min-width: 1023px) and (max-width: 1410px) {
+  .page-footer__menu {
+    width: 50%; } }
 
 @media (max-width: 1023px) {
   .page-footer {
@@ -981,6 +997,7 @@ a {
     margin-bottom: 28px; }
   .page-footer__menu {
     width: 100%;
+    padding: 0;
     padding-bottom: 30px; }
   .page-footer__contacts {
     width: 100%;
