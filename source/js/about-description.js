@@ -1,4 +1,3 @@
-  
 'use strict';
 
 // меняет текст в последнем параграфе на .. в разделе О компании на планшете и мобильном
@@ -15,17 +14,17 @@
 
   var smallText = originalText.split(' ', WORDS_COUNT).join(' ').concat(DEVIDER);
 
-  // if (textContainer) {
-  //   var changeTextHandler = function (evt) {
-  //     if (evt.matches) {
-  //       textContainer.innerText = smallText;
-  //     } else {
-  //       textContainer.innerText = originalText;
-  //     }
-  //   };
-  // }
+  if (textContainer) {
+    var changeTextHandler = function (evt) {
+      if (evt.matches) {
+        textContainer.innerText = smallText;
+      } else {
+        textContainer.innerText = originalText;
+      }
+    };
+  }
 
-  // tablet.addListener(changeTextHandler);
-  // changeTextHandler(tablet);
+  tablet.addListener(changeTextHandler);
+  changeTextHandler(tablet);
 
 })();

@@ -825,10 +825,6 @@ a {
           justify-content: space-between;
   color: #1b2d37; }
 
-.page-footer__links {
-  width: 20%;
-  margin-right: auto; }
-
 .page-footer__logo {
   margin-bottom: 47px; }
 
@@ -856,7 +852,7 @@ a {
   border: none; }
 
 .page-footer__menu {
-  width: 50%;
+  padding: 0 155px 0 204px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1; }
@@ -1234,10 +1230,6 @@ a {
 
 @media (max-width: 1023px) {
   .about__description {
-    height: 200px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: pre;
     margin-bottom: 27px; }
     .about__description:last-of-type {
       margin-bottom: 45px; } }
