@@ -825,6 +825,10 @@ a {
           justify-content: space-between;
   color: #1b2d37; }
 
+.page-footer__links {
+  width: 20%;
+  margin-right: auto; }
+
 .page-footer__logo {
   margin-bottom: 47px; }
 
@@ -852,7 +856,7 @@ a {
   border: none; }
 
 .page-footer__menu {
-  padding: 0 155px 0 204px;
+  width: 50%;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1; }

@@ -16,7 +16,6 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
 var concat = require("gulp-concat");
-var removeUseStrict = require("gulp-remove-use-strict");
 
 var ghPages = require("gh-pages");
 var path = require("path");
@@ -59,7 +58,6 @@ gulp.task("vendor-scripts", function() {
 gulp.task("main-scripts", function() {
   return gulp.src(["!source/js/vendor/**/*", "source/js/utils.js", "source/js/*.js"])
     .pipe(concat("main.js"))
-    .pipe(removeUseStrict())
     .pipe(gulp.dest("build/js"));
 });
 
