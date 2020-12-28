@@ -1234,6 +1234,10 @@ a {
 
 @media (max-width: 1023px) {
   .about__description {
+    height: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre;
     margin-bottom: 27px; }
     .about__description:last-of-type {
       margin-bottom: 45px; } }

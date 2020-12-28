@@ -63,6 +63,10 @@
   }
 
   .about__description {
+    height: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre;
     margin-bottom: 27px;
 
     &:last-of-type {
