@@ -32,7 +32,8 @@
     display: none;
   }
 
-  .accordion__panel--visible {
+  .accordion__panel--visible,
+  .accordion__panel--no-js {
     display: block;
   }
 }
