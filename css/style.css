@@ -478,8 +478,6 @@ a {
       opacity: 0.6; }
 
 @media (min-width: 1023px) and (max-width: 1410px) {
-  .page-header__links {
-    width: 60%; }
   .page-header__item--email {
     margin-right: 0; } }
 
@@ -786,7 +784,7 @@ a {
 .page-footer {
   position: relative;
   min-height: 316px;
-  padding-top: 64px; }
+  padding-top: 66px; }
   .page-footer a {
     color: #1b2d37; }
     .page-footer a:hover, .page-footer a:focus {
@@ -825,6 +823,9 @@ a {
           justify-content: space-between;
   color: #1b2d37; }
 
+.page-footer__links {
+  width: 20%; }
+
 .page-footer__logo {
   margin-bottom: 47px; }
 
@@ -852,7 +853,8 @@ a {
   border: none; }
 
 .page-footer__menu {
-  padding: 0 155px 0 204px;
+  width: 50%;
+  padding-left: 138px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1; }
@@ -861,18 +863,14 @@ a {
   padding: 0;
   margin: 0;
   list-style: none;
-  max-height: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   opacity: 50%; }
   .page-footer__list li {
+    width: 44%;
     margin-right: 20px; }
 
 .page-footer__contacts {
@@ -920,7 +918,7 @@ a {
 
 @media (min-width: 1023px) and (max-width: 1410px) {
   .page-footer__menu {
-    width: 50%; } }
+    padding-left: 50px; } }
 
 @media (max-width: 1023px) {
   .page-footer {
@@ -967,6 +965,8 @@ a {
     width: 50%; }
   .page-footer__list {
     max-height: 100%; }
+    .page-footer__list li {
+      width: 100%; }
   .page-footer__contacts {
     width: 50%;
     padding-left: 17px; }
@@ -1049,7 +1049,8 @@ a {
       content: url("../img/minus.svg"); }
   .accordion__panel--hidden {
     display: none; }
-  .accordion__panel--visible {
+  .accordion__panel--visible,
+  .accordion__panel--no-js {
     display: block; } }
 
 .features__wrapper {
@@ -1150,7 +1151,7 @@ a {
   .features__item {
     width: 100%;
     margin-bottom: 20px;
-    padding: 24px 15px 24px 28px; }
+    padding: 26px 15px 24px 28px; }
     .features__item:nth-child(odd) {
       margin-right: 0; }
     .features__item svg {
@@ -1160,7 +1161,7 @@ a {
       line-height: 28px;
       margin-bottom: 8px; }
     .features__item--hired {
-      padding: 22px 13px 29px 28px; }
+      padding: 26px 13px 29px 28px; }
     .features__item--detective {
       padding-bottom: 57px; }
       .features__item--detective svg {
@@ -1185,6 +1186,15 @@ a {
     font-family: "Roboto Condensed", "Arial", "Helvetica", sans-serif;
     font-weight: 400;
     color: #666666; }
+  .about__wrapper p {
+    margin: 0;
+    margin-bottom: 22px;
+    padding: 0;
+    font-size: 16px;
+    line-height: 21.5px;
+    color: #666666; }
+    .about__wrapper p:last-of-type {
+      margin-bottom: 40px; }
   .about__wrapper::before {
     position: absolute;
     top: 29px;
@@ -1199,16 +1209,6 @@ a {
       .about__wrapper::before {
         background-image: url("../img/year-desktop@2x.png"); } }
 
-.about__description {
-  margin: 0;
-  margin-bottom: 22px;
-  padding: 0;
-  font-size: 16px;
-  line-height: 21.5px;
-  color: #666666; }
-  .about__description:last-of-type {
-    margin-bottom: 40px; }
-
 @media (max-width: 1023px) {
   .about__wrapper {
     margin-bottom: 83px;
@@ -1217,6 +1217,10 @@ a {
       font-size: 32px;
       line-height: 45px;
       margin-bottom: 27px; }
+    .about__wrapper p {
+      margin-bottom: 27px; }
+      .about__wrapper p:last-of-type {
+        margin-bottom: 45px; }
     .about__wrapper::before {
       top: 0;
       left: -3px;
@@ -1228,12 +1232,6 @@ a {
       .about__wrapper::before {
         background-image: url("../img/year-tablet@2x.png"); } }
 
-@media (max-width: 1023px) {
-  .about__description {
-    margin-bottom: 27px; }
-    .about__description:last-of-type {
-      margin-bottom: 45px; } }
-
 @media (max-width: 767px) {
   .about__wrapper {
     margin-bottom: 64px;
@@ -1243,11 +1241,12 @@ a {
     .about__wrapper h2 {
       font-size: 28px;
       line-height: 39px;
-      margin-bottom: 24px; }
-  .about__description {
-    margin-bottom: 45px; }
-    .about__description:last-of-type {
-      margin-bottom: 35px; } }
+      margin-bottom: 20px; }
+    .about__wrapper p {
+      margin-bottom: 38px;
+      line-height: 22.5px; }
+      .about__wrapper p:last-of-type {
+        margin-bottom: 28px; } }
 
 .catalog {
   background-color: #1b2d37; }

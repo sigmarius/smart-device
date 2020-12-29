@@ -10,10 +10,10 @@
 }());
 // меняет текст в последнем параграфе на .. в разделе О компании на планшете и мобильном
 (function () {
-    var WORDS_COUNT = 45;
+    var WORDS_COUNT = 23;
     var DEVIDER = '..';
     var tablet = window.matchMedia('(max-width: 1023px)');
-    var textContainer = document.querySelector('.about__description');
+    var textContainer = document.querySelector('.about p:last-of-type');
     var originalText = textContainer.innerText;
     var smallText = originalText.split(' ', WORDS_COUNT).join(' ').concat(DEVIDER);
     if (textContainer) {
@@ -31,18 +31,19 @@
 // аккордион на mobile в футере
 (function () {
     var accordion = document.querySelectorAll('.accordion');
+    document.querySelector('.accordion__panel--no-js').classList.remove('accordion__panel--no-js');
     if (accordion) {
         for (var i = 0; i < accordion.length; i++) {
             accordion[i].addEventListener('click', function (evt) {
                 var button = evt.target;
                 button.classList.toggle('accordion--active');
                 var panel = button.parentNode.nextElementSibling;
-                if (panel.classList.contains('accordion__panel--visible')) {
-                    panel.classList.remove('accordion__panel--visible');
-                    panel.classList.add('accordion__panel--hidden');
-                } else {
+                if (button.classList.contains('accordion--active')) {
                     panel.classList.add('accordion__panel--visible');
                     panel.classList.remove('accordion__panel--hidden');
+                } else {
+                    panel.classList.add('accordion__panel--hidden');
+                    panel.classList.remove('accordion__panel--visible');
                 }
             });
         }
