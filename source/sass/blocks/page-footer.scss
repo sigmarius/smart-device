@@ -1,7 +1,7 @@
 .page-footer {
   position: relative;
   min-height: 316px;
-  padding-top: 66px;
+  padding-top: 61px;
 
   a {
     color: $hero-bg;
@@ -58,6 +58,7 @@
 
 .page-footer__links {
   width: 20%;
+  padding-top: 2px;
 }
 
 .page-footer__logo {
@@ -73,17 +74,6 @@
   }
 }
 
-.page-footer__title {
-  @include clear-content(24px);
-  @include font(15px, 16px);
-  font-family: "Roboto Condensed", "Arial", "Helvetica", sans-serif;
-  font-weight: 400;
-  color: $hero-bg;
-  text-transform: uppercase;
-  background: none;
-  border: none;
-}
-
 .page-footer__menu {
   width: 50%;
   padding-left: 138px;
@@ -95,11 +85,11 @@
   display: flex;
   flex-wrap: wrap;
   opacity: 50%;
+}
 
-  li {
-    width: 44%;
-    margin-right: 20px;
-  }
+.page-footer__item {
+  width: 44%;
+  margin-right: 20px;
 }
 
 .page-footer__contacts {
@@ -182,7 +172,7 @@
 
   .page-footer__links {
     width: 100%;
-    margin-bottom: 61px;
+    margin-bottom: 59px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -200,19 +190,44 @@
     }
   }
 
-  .page-footer__title {
-    margin-bottom: 25px;
-  }
-
   .page-footer__menu {
     width: 50%;
+    padding-left: 0;
   }
 
   .page-footer__list {
     max-height: 100%;
+  }
 
-    li {
-      width: 100%;
+  .page-footer__item {
+    width: 100%;
+
+    &--about {
+      order: 0;
+    }
+
+    &--products {
+      order: 1;
+    }
+
+    &--production {
+      order: 2;
+    }
+
+    &--montage {
+      order: 3;
+    }
+
+    &--details {
+      order: 4;
+    }
+
+    &--delivery {
+      order: 5;
+    }
+
+    &--contacts {
+      order: 6;
     }
   }
 
@@ -240,7 +255,8 @@
     }
 
     &::after {
-      top: 250px;
+      top: 258px;
+      box-shadow: 0 73px 0 0 #626962;
     }
   }
 
@@ -250,19 +266,18 @@
 
   .page-footer__links {
     min-height: 170px;
-    margin-bottom: 75px;
+    margin-bottom: 73px;
     flex-direction: column;
-  }
-
-  .page-footer__title {
-    position: relative;
-    margin-bottom: 28px;
   }
 
   .page-footer__menu {
     width: 100%;
     padding: 0;
     padding-bottom: 30px;
+  }
+
+  .page-footer__list {
+    padding-top: 20px;
   }
 
   .page-footer__contacts {

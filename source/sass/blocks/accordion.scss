@@ -1,17 +1,25 @@
 .accordion {
-  display: none;
+  @include clear-content(24px);
+  @include font(15px, 16px);
+  position: relative;
+  font-family: "Roboto Condensed", "Arial", "Helvetica", sans-serif;
+  font-weight: 400;
+  color: $hero-bg;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+
+  &::after {
+    display: none;
+  }
 }
 
 @media (max-width: $mobile) {
   .accordion {
-    position: absolute;
-    right: 0;
-    top: 0;
+    width: 100%;
+    margin-bottom: 28px;
     display: block;
-    width: 20px;
-    height: 20px;
-    background: none;
-    border: none;
+    text-align: left;
 
     &::after {
       position: absolute;
@@ -19,6 +27,7 @@
       right: 0;
       width: 16px;
       height: 16px;
+      display: block;
       content: url("../img/plus.svg");
     }
 
@@ -28,12 +37,20 @@
     }
   }
 
+  .accordion__panel {
+    display: none;
+  }
+
   .accordion__panel--hidden {
     display: none;
   }
 
   .accordion__panel--visible,
   .accordion__panel--no-js {
+    display: block;
+  }
+
+  .accordion__panel--active {
     display: block;
   }
 }
