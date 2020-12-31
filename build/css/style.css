@@ -391,6 +391,7 @@ a {
   margin: 0 auto; }
   @media (min-width: 1024px) and (max-width: 1450px) {
     .wrapper {
+      min-width: 1000px;
       padding: 0 20px; } }
   @media (max-width: 1023px) {
     .wrapper {
@@ -532,7 +533,7 @@ a {
   .page-header__links {
     margin-right: 0; }
   .page-header__item:not(:last-child) {
-    margin-right: auto; }
+    margin-right: 20px; }
   .page-header__item--email {
     margin-right: 8px; } }
 
@@ -636,7 +637,7 @@ a {
     z-index: 0;
     max-width: 705px;
     width: 100%;
-    height: 515px; }
+    height: auto; }
     @media (max-width: 1600px) {
       .hero__image img {
         right: 0; } }
@@ -1180,6 +1181,7 @@ a {
     margin-bottom: 34px;
     padding: 37px 13px 0; }
   .features__item {
+    max-width: 700px;
     width: 100%;
     margin-bottom: 20px;
     padding: 23px 15px 24px 28px; }
